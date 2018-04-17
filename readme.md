@@ -1,7 +1,8 @@
 Introduction
 ============
 
-![ChickTech Robot](images/P1080362.JPG) 
+![ChickTech Robot](images/OSTR.JPG) 
+
 Robotics is the exciting intersection of a number of engineering fields including mechanical engineering, electrical engineering, and computer science.  This project was designed as the basis for a two-day workshop for high school age students to introduce them to engineering principles and giving them a jumping off point for exploring their interests further.  There is something for everyone here, even if it is just for the art it creates.
 
 - Easy to build.
@@ -29,11 +30,11 @@ Bill Of Materials
 
 Design Files
 ============
-The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [design_files](design_files/) folder.  You can oogle the [schematic](electronics/Schematic.pdf).
+The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [electronics](electronics/) folder.  You can oogle the [schematic](electronics/Schematic.pdf).
 
-All 3D STL files located in the [mechanical/STL)[mechanical/STL] folder. They were design were designed using:
+All 3D STL files located in the [mechanical/STL](mechanical/STL) folder. They were design were designed using:
 
-- [OpenSCAD](http://www.openscad.org/), files located in the [mechanical/OpenSCAD](mechanical/OPenSCAD) folder.
+- [OpenSCAD](http://www.openscad.org/), files located in the [mechanical/OpenSCAD](mechanical/OpenSCAD) folder.
 - [FreeCad](https://www.freecadweb.org/), files located in the [mechanical/FreeCad](mechanical/FreeCad) folder.
 - [TinkerCad](https://www.tinkercad.com/things/1PzjMSYXagP-oser/editv2) 
 
