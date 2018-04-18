@@ -9,7 +9,7 @@
 // Added pedistal base so you can adjust platform hieght.
 
 
-deckHeight = 19.5;    // from chassis bottom to ground, (must be at lease ballDiameter)
+deckHeight = 18.5;    // from chassis bottom to ground, (must be at lease ballDiameter)
 ballDiameter = 16.5;    // 7/16" ball bearing = 12.25mm, WAS 16.5  16mm = 5/8" ball bearing
 ballTolerance = 0.4;  // play between ball and surface
 wallThickness = 2.5;

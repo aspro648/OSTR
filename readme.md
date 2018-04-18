@@ -1,9 +1,9 @@
-Introduction
+Open Source Turtle Robot (OSTR)
 ============
 
-![ChickTech Robot](images/OSTR.JPG) 
+![Open Source Turtle Robot](images/OSTR.JPG) 
 
-Robotics is the exciting intersection of a number of engineering fields including mechanical engineering, electrical engineering, and computer science.  This project was designed as the basis for a two-day workshop for high school age students to introduce them to engineering principles and giving them a jumping off point for exploring their interests further.  There is something for everyone here, even if it is just for the art it creates.
+Robotics is the exciting intersection of a number of engineering fields including mechanical engineering, electrical engineering, and computer science.  This project was designed as the basis for a two-day workshop for high school age students to introduce them to engineering principles and giving them a jumping off point for exploring their interests further.  There is something for everyone here, even if it is just for the art it creates. The design goals were:
 
 - Easy to build.
 - Easy to program.

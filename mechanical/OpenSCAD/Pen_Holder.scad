@@ -4,7 +4,7 @@
 
 
 // Diameter of pen in mm.
-penDiameter = 11.0;  // 10.60
+penDiameter = 10.9;  // 10.60
 
 union();
 
@@ -45,7 +45,7 @@ difference(){
 	}
     // re-drill the hole covered by servoBracket
 	translate([0, 0, -baseThickness])
-	cylinder(2 * barrelHieght, penRadius, penRadius+.2);
+	cylinder(2 * barrelHieght, penRadius, penRadius+0.2);
 
     translate([-40, -40, -40])
     cube([80, 80, 40]);
