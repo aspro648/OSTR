@@ -1,4 +1,4 @@
-update=4/14/2018 9:17:32 PM
+update=4/17/2018 10:45:46 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -39,7 +39,7 @@ LabSize=60
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=base-rescue
+LibName1=lib_sch/project
 LibName2=power
 LibName3=device
 LibName4=transistors
@@ -69,5 +69,3 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=C:/Users/MakersBox/Dropbox/KiCad2015/symbols-legacy/MMA8452Q
-LibName32=C:/Users/MakersBox/Downloads/lib_w_analog/w_analog

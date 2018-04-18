@@ -30,7 +30,7 @@ Bill Of Materials
 
 Design Files
 ============
-The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [electronics](electronics/) folder.  You can oogle the [schematic](electronics/Schematic.pdf).
+The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [electronics](electronics/) folder.  You can oogle the [schematic](electronics/project.pdf).
 
 All 3D STL files located in the [mechanical/STL](mechanical/STL) folder. They were design were designed using:
 

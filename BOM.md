@@ -1,7 +1,7 @@
-Open Source Turtle Robot V0.0 Bill of Materials 
+Open Source Turtle Robot V0.2 Bill of Materials 
 ===============================================
 
-- 1 ea. OSH Park Purfect Purple PCB,  
+- 1 ea. OSH Park Purfect [Purple PCB](https://oshpark.com/shared_projects/K5tvnM4o)  
 - 1 ea. Adafruit Pro Trinket 3V, [Adafruit 2010](https://www.digikey.com/short/jzr3t0)
 - 1 ea. ULN2803 Darlington Driver, [STM ULN2803A](https://www.digikey.com/short/q728f3)
 - 2 ea. JST B5B-XH-A Receptical, [JST B5B-XH-A](https://www.digikey.com/short/qcrr5m)
