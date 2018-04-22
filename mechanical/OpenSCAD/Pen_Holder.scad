@@ -4,7 +4,7 @@
 
 
 // Diameter of pen in mm.
-penDiameter = 10.9;  // 10.60
+penDiameter = 10.6;  // 10.60
 
 union();
 
