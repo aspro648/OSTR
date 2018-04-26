@@ -20,16 +20,16 @@ With those goals in mind, here were a couple of the design choices:
 - Open Source so you could make one of your own!
 
 A kit for this project is [available on Tindie](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/).
-![images/tindie-mediums.png](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/)
+[![Tindie Dog](images/tindie-mediums.png)](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/)
 
 Bill Of Materials
-=================
+-----------------
 
 - [Bill of Materials](BOM.md)
 
 
 Design Files
-============
+------------
 The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [electronics](electronics/) folder.  You can oogle the [schematic](electronics/project.pdf).
 
 All 3D STL files located in the [mechanical/STL](mechanical/STL) folder. They were design were designed using:
@@ -39,15 +39,15 @@ All 3D STL files located in the [mechanical/STL](mechanical/STL) folder. They we
 - [TinkerCad](https://www.tinkercad.com/things/1PzjMSYXagP-oser/editv2) 
 
 Firmware
-========
+--------
 This project is programed using the Open Source [Arduino](https://www.arduino.cc/). The firmware is located in the [firmware](firmware/) folder.  Instructions for setting up the Arduino enviroment for the Adafruit Trinket Pro are at [https://learn.adafruit.com/introducing-pro-trinket](https://learn.adafruit.com/introducing-pro-trinket).
 
 Assembly Instructions
-=====================
+---------------------
 I have published detailed instructions on Instructables at [https://www.instructables.com/id/OSTR/](https://www.instructables.com/id/OSTR/).
 
 License
-=======
+-------
 [Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US)](https://creativecommons.org/licenses/by-sa/3.0/us/)
 
 You are free to:
