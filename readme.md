@@ -19,8 +19,8 @@ With those goals in mind, here were a couple of the design choices:
 - Pen plotting with Turtle graphics for interesting output.
 - Open Source so you could make one of your own!
 
-See a [Show and Tell](https://youtu.be/j0FpB0iv0v0).
-
+A kit for this project is [available on Tindie](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/).
+![Tindie](images/tindie-mediums.png)
 
 Bill Of Materials
 =================
@@ -44,7 +44,7 @@ This project is programed using the Open Source [Arduino](https://www.arduino.cc
 
 Assembly Instructions
 =====================
-Located in the [documents](documents/) folder.
+I have published detailed instructions on Instructables at [https://www.instructables.com/id/OSTR/](https://www.instructables.com/id/OSTR/).
 
 License
 =======
