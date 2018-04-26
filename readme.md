@@ -20,7 +20,7 @@ With those goals in mind, here were a couple of the design choices:
 - Open Source so you could make one of your own!
 
 A kit for this project is [available on Tindie](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/).
-![Tindie](images/tindie-mediums.png)
+![images/tindie-mediums.png](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/)
 
 Bill Of Materials
 =================
