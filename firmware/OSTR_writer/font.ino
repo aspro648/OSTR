@@ -112,16 +112,16 @@ void f(){
   moveForward(2 * scale);
   penUp();
   moveBackward(2 * scale);
-        turnRight(90);
-        moveForward(2 * scale);
-        turnLeft(90);
-        penDown();
-        moveForward(2 * scale);
-        penUp();
-        turnRight(90);
-        moveForward(2* scale);
-        turnLeft(90);
-        moveForward(1* scale);
+  turnRight(90);
+  moveForward(2 * scale);
+  turnLeft(90);
+  penDown();
+  moveForward(2 * scale);
+  penUp();
+  turnRight(90);
+  moveForward(2 * scale);
+  turnLeft(90);
+  moveForward(0.5 * scale);
 }
 
 void f1(){
@@ -147,10 +147,10 @@ void f1(){
 
 void G(){
   penUp();
-  turnLeft(90 - 33.7);
+  turnLeft(56.3);
   moveForward(3.61 * scale);
   penDown();
-  turnLeft(78.7);
+  turnLeft(90-56.3+45);
   moveForward(1.41 * scale);
   turnRight(90);
   moveBackward(1.41 * scale);
@@ -166,7 +166,7 @@ void G(){
   moveBackward(1 * scale);
   penUp();
   turnRight(45);
-  moveForward(2.83 * scale);
+  moveForward(2.82 * scale);
   turnLeft(45);
   moveBackward(0.5 * scale);
 }
@@ -256,9 +256,9 @@ void M(){
   penDown();
   moveForward(4 * scale);
   turnLeft(26.6);
-  moveBackward(1.41 * scale);
+  moveBackward(2.24 * scale);
   turnRight(26.6 + 26.6);
-  moveForward(1.41 * scale);
+  moveForward(2.24 * scale);
   turnLeft(26.6);
   moveBackward(4 * scale);
   penUp();
@@ -449,9 +449,9 @@ void W(){
   penDown();
   moveForward(4.123 * scale);
   turnRight(26.6);
-  moveBackward(1.41 * scale);
+  moveBackward(2.24 * scale);
   turnLeft(26.6 + 26.6);
-  moveForward(1.41 * scale);
+  moveForward(2.24 * scale);
   turnRight(26.6);
   moveBackward(4 * scale);
   penUp();
@@ -485,8 +485,8 @@ void Y(){
   penDown();
   moveForward(1.41 * scale);
   turnRight(27 + 27);
-  moveBackward(1.41 * scale);
-  moveForward(1.41 * scale);
+  moveBackward(2.24 * scale);
+  moveForward(2.24 * scale);
   turnLeft(27);
   moveForward(2 * scale);
   penUp();
