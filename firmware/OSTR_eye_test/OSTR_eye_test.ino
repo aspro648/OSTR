@@ -9,10 +9,10 @@
 // Does not account for IR from sunlight.
 
 // robot setup
-byte leftDetector = A5;
+byte leftDetector = 19;//A5;
 byte leftEmitter = 0;
 byte leftLED = A4;
-byte rightDetector = A2;
+byte rightDetector = 16;//A2;
 byte rightEmitter = 9;
 byte rightLED = 1;
 byte button = A3;

@@ -29,12 +29,12 @@ Electronics:
 
 Hardware:
 
-- 2 ea. 1 7/8" ID x 3/16' O-ring, http://www.mcmaster.com/#9452k47/=yskfyu
+- 2 ea. 1 5/8" ID x 1/8' O-ring Dash 223, https://www.mcmaster.com/9452k61
 - 1 ea. Caster 5/8" bearing, http://www.mcmaster.com/#96455k58/=yskbki
 - 8 ea. M3 x 6mm rounded head screw, https://www.mcmaster.com/#92005a116/=19rb37d
 - 4 ea. M3 x 6mm flat head screw, http://www.mcmaster.com/#91420a116/=yskru0
 - 10 ea. M3 Nut, http://www.mcmaster.com/#90591a250/=yskc6u
-- 4 ea. #2 x 1/4 thread forming screw, https://www.mcmaster.com/#90380a005/=19o9cmt
+- 6 ea. #2 x 1/4 thread forming screw, https://www.mcmaster.com/#90380a005/=19o9cmt
    
 * Substitute at your own risk
    

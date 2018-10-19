@@ -3,7 +3,7 @@
 $fn = 64;
 
 // holder variables
-penDiameter = 10.5; // 12.5mm works with Sharpie Fine
+penDiameter = 10; // 12.5mm works with Sharpie Fine
                   // 11.75 for Visa-vis
                   // 10 mm for Crayola Washables
 penRadius = penDiameter / 2;
