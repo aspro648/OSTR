@@ -1,7 +1,7 @@
-Introduction
+Open Source Turtle Robot (OSTR)
 ============
 
-![ChickTech Robot](V2/images/Turtle Robot.jpg) 
+![ChickTech Robot](V2/images/TurtleRobot.jpg) 
 
 I designed this project for a 10-hour workshop for [ChickTech.org](http://www.chicktech.org) whose goal is to introduce teenage women to STEM topics. The goals for this project were:
 
