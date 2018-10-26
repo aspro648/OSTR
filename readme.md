@@ -30,7 +30,7 @@ for x in range(5):
 ```
 It you have Python installed, try it!  If not, [try it online](https://repl.it/site/languages/python_turtle).
 
-###Video of Turtle Robot in action:
+### Video of Turtle Robot in action:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/j0FpB0iv0v0/0.jpg)](https://www.youtube.com/watch?v=j0FpB0iv0v0)
 
@@ -50,17 +50,17 @@ Having told you the at-cost and provided you my BOM, I'd still offer to [sell yo
 
 Design Files
 ------------
-The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [design_files](design_files/) folder.  You can oogle the [schematic](docs/Schematic.pdf).
+The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [design_files](V2/design_files/) folder.  You can oogle the [schematic](V2/docs/Schematic.pdf).
 
-The 3D Design files are located in the [3D](3D/) folder.
+The 3D Design files were created with a combination of [FreeCad](https://www.freecadweb.org/), [OpenSCAD](https://www.openscad.org/) (both Open Source), and online [TinkerCad](https://www.tinkercad.com/).  Design files and STLs are located in the [3D](V2/3D/) folder.
 
 Firmware
 --------
-This project is programed using the Open Source [Arduino](https://www.arduino.cc/). The firmware is located in the [firmware](firmware/) folder.  Instructions for setting up the Arduino enviroment for the Adafruit Trinket Pro are at [https://learn.adafruit.com/introducing-pro-trinket](https://learn.adafruit.com/introducing-pro-trinket).
+This project is programed using Open Source [Arduino](https://www.arduino.cc/) or Adafruit's [Circuit Python](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython) depending on the microcontroller used. The firmware is located in the [firmware](V2/firmware/) folder.  Instructions for setting up the Arduino enviroment for the Adafruit Trinket Pro are at [https://learn.adafruit.com/introducing-pro-trinket](https://learn.adafruit.com/introducing-pro-trinket).
 
 Assembly Instructions
 ---------------------
-Located in the [docs](docs/) folder.
+Located in the [docs](docs/) folder.  May still have pictures of V1 assembly, but they are nearly identical.
 
 License
 -------
@@ -80,4 +80,4 @@ Certified Open Source:
 ----------------------
 This project as been certified by the [Open Source Hardward Association](https://certification.oshwa.org/):
 
-![OSHWA](V2/image/OSHWA.png
+![OSHWA](V2/images/OSHWA.png
