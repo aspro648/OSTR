@@ -28,7 +28,9 @@ for x in range(5):
     forward(100)
     right(144)
 ```
-It you have Python installed, try it!  If not, [try it online](https://repl.it/site/languages/python_turtle).
+
+Here is a great Hour of Code tutorial to get you introduced to Python Turtle: [https://groklearning.com/hoc/activity/snowflake/](https://groklearning.com/hoc/activity/snowflake/].  The only thing pysical Turtle Robot can't do is change colors automatically, but you can alway swap the pens around manually.
+
 
 ### Video of Turtle Robot (V1) in action:
 
