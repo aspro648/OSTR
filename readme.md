@@ -30,7 +30,7 @@ for x in range(5):
 ```
 It you have Python installed, try it!  If not, [try it online](https://repl.it/site/languages/python_turtle).
 
-### Video of Turtle Robot in action:
+### Video of Turtle Robot (V1) in action:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/j0FpB0iv0v0/0.jpg)](https://www.youtube.com/watch?v=j0FpB0iv0v0)
 
@@ -60,7 +60,7 @@ This project is programed using Open Source [Arduino](https://www.arduino.cc/) o
 
 Assembly Instructions
 ---------------------
-Located in the [docs](docs/) folder.  May still have pictures of V1 assembly, but they are nearly identical.
+Located in the [docs](V2/docs/) folder.  May still have pictures of V1 assembly, but they are nearly identical.
 
 License
 -------
@@ -80,4 +80,4 @@ Certified Open Source:
 ----------------------
 This project as been certified by the [Open Source Hardward Association](https://certification.oshwa.org/):
 
-![OSHWA](V2/images/OSHWA.png
+![OSHWA](V2/images/OSHWA.png)
