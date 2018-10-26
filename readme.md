@@ -1,7 +1,7 @@
 Introduction
 ============
 
-![ChickTech Robot](images/P1080362.JPG) 
+![ChickTech Robot](V2/images/P1080362.JPG) 
 I designed this project for a 10-hour workshop for ChickTech.org whose goal is to introduce teenage women to STEM topics. The goals for this project were:
 
 - Easy to build.
@@ -9,16 +9,21 @@ I designed this project for a 10-hour workshop for ChickTech.org whose goal is t
 - Did something interesting.
 - Low-cost so participants could take it home and continue to learn.
 
-With those goals in mind, here were a couple of the design choices:
+![Robotics Engineering Fields](V2/images/robotics.png) 
 
-- Arduino compatible for ease of programming.
-- 4xAA battery power for cost and availability.
-- Stepper motors for accurate motion.
-- 3D Printed for ease of customization.
-- Pen plotting with Turtle graphics for interesting output.
-- Open Source so you could make one of your own!
+Robotics is the exciting intersection of a number of engineering fields including mechanical engineering, electrical engineering, and computer science. This project was designed to make learning about these fields accessible and exciting.
 
-See a [Show and Tell](https://youtu.be/j0FpB0iv0v0).
+Turtle robots are controled by simple instructions like "forward(distance)" and "left(degrees)", and their visual tracks are instructive as well as entertaining. They also demonstrate how systems with simple rules can have complex behaviors, something we see in nature all the time.
+
+![Turtle Python commands in Idle](V2/images/python_idle.jpg) 
+![Turtle Graphics](V2/images/python_turtle.jpg) 
+
+Python is a popular and easy to learn programming language that already has Turle Graphics built in.  Since the robots instructions are the same, programs and paterns can be evaluated on the computer and then run on the robot.
+
+See a short [Show and Tell](https://youtu.be/j0FpB0iv0v0).
+
+This robot has been refined through a number workshops, but still has room for improvement.  Please share your ideas and modifications so it can continue to improve.
+![ChickTech Workshop](V2/images/ChichTech.jpg) 
 
 
 Bill Of Materials
