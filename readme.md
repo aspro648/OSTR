@@ -1,8 +1,9 @@
 Introduction
 ============
 
-![ChickTech Robot](V2/images/P1080362.JPG) 
-I designed this project for a 10-hour workshop for ChickTech.org whose goal is to introduce teenage women to STEM topics. The goals for this project were:
+![ChickTech Robot](V2/images/Turtle Robot.jpg) 
+
+I designed this project for a 10-hour workshop for [ChickTech.org](http://www.chicktech.org) whose goal is to introduce teenage women to STEM topics. The goals for this project were:
 
 - Easy to build.
 - Easy to program.
@@ -20,7 +21,8 @@ Turtle robots are controled by simple instructions like "forward(distance)" and 
 
 Python is a popular and easy to learn programming language that already has Turle Graphics built in.  Since the robots instructions are the same, programs and paterns can be evaluated on the computer and then run on the robot.
 
-See a short [Show and Tell](https://youtu.be/j0FpB0iv0v0).
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/j0FpB0iv0v0/0.jpg)](https://www.youtube.com/watch?v=j0FpB0iv0v0)
+
 
 This robot has been refined through a number workshops, but still has room for improvement.  Please share your ideas and modifications so it can continue to improve.
 ![ChickTech Workshop](V2/images/ChichTech.jpg) 
