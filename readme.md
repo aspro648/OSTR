@@ -15,20 +15,23 @@ Robotics is the exciting intersection of a number of engineering fields includin
 
 Turtle robots are controled by simple instructions like "forward(distance)" and "left(degrees)", and their visual tracks are instructive as well as entertaining. They also demonstrate how systems with simple rules can have complex behaviors, something we see in nature all the time.
 
+New to Version 2 is the shift from the Adafruit [Trinket Pro](https://www.adafruit.com/product/2010) to their [ItsyBitsy 32U4 3V](https://www.adafruit.com/product/3675) which enables USB communication for easier troubleshooting, or the [ItsyBitsy M0 Express](https://www.adafruit.com/product/3727) which allows programing in Python!
+
 ![Turtle Python commands in Idle](V2/images/python_idle.jpg) 
 ![Turtle Graphics](V2/images/python_turtle.jpg) 
 
-Python is a popular and easy to learn programming language that already has Turle Graphics built in.  Since the robots instructions are the same, programs and paterns can be evaluated on the computer and then run on the robot.  It you have Python installed, try it!  If not, [try it online](https://repl.it/site/languages/python_turtle).
+Python is a popular and easy to learn programming language that already has Turle Graphics built in.  Since the robots instructions are the same, programs and paterns can be evaluated on the computer and then run on the robot. 
 ```python
 from turtle import *
-
 
 for x in range(5):
     forward(100)
     right(144)
 ```
+It you have Python installed, try it!  If not, [try it online](https://repl.it/site/languages/python_turtle).
 
-Video of Turtle Robot in action:
+###Video of Turtle Robot in action:
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/j0FpB0iv0v0/0.jpg)](https://www.youtube.com/watch?v=j0FpB0iv0v0)
 
 
