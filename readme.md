@@ -44,8 +44,8 @@ This robot has been refined through a number workshops, but still has room for i
 
 Bill Of Materials
 -----------------
-In bulk quantities, the cost per robot is about $40.  The Bill of Materials is available [here](BOM.md).
-Having told you the at-cost and provided you my BOM, I'd still offer to [sell you a kit](/V2/BOM.md) if you'd like to pay for the convenice of a single-source or you don't have access to a 3D printer.  This also allows me continue development for future workshops.
+In bulk quantities, the cost per robot is about $40.  The Bill of Materials is available [here](/V2/BOM.md).
+Having told you the at-cost and provided you my BOM, I'd still offer to [sell you a kit](https://www.tindie.com/products/MakersBox/open-source-turtle-robot-ostr/) if you'd like to pay for the convenience of a single-source or you don't have access to a 3D printer.  This also allows me continue development for future workshops.
 
 ![Tindie](V2/images/tindie.png)
 
@@ -58,11 +58,12 @@ The 3D Design files were created with a combination of [FreeCad](https://www.fre
 
 Firmware
 --------
-This project is programed using Open Source [Arduino](https://www.arduino.cc/) or Adafruit's [Circuit Python](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython) depending on the microcontroller used. The firmware is located in the [firmware](V2/firmware/) folder.  Instructions for setting up the Arduino enviroment for the Adafruit Trinket Pro are at [https://learn.adafruit.com/introducing-pro-trinket](https://learn.adafruit.com/introducing-pro-trinket).
+This project is programed using Open Source [Arduino](https://www.arduino.cc/) or Adafruit's [Circuit Python](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython) depending on the microcontroller used. The firmware is located in the [firmware](V2/firmware/) folder.  Instructions for setting up the Arduino environment for the ItsyBitsy 32U4 are at [https://learn.adafruit.com/introducting-itsy-bitsy-32u4/](https://learn.adafruit.com/introducting-itsy-bitsy-32u4/).
 
 Assembly Instructions
 ---------------------
-Located in the [docs](V2/docs/) folder.  May still have pictures of V1 assembly, but they are nearly identical.
+[https://www.instructables.com/id/OSTR/](https://www.instructables.com/id/OSTR/).  
+Also, check the [docs](V2/docs/) folder for handouts, etc.  May still have pictures of V1 assembly, but they are nearly identical.
 
 License
 -------

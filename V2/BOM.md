@@ -4,7 +4,10 @@ Open Source Turtle Robot Bill Of Materials (V2)
 Electronics:
 
 - 1 ea. Park Purfect Purple PCB from /design_files folder
-- 1 ea. Adafruit ItsyBitsy 3V, https://www.digikey.com/short/jw9mwm
+
+- 1 ea. Microcontroller, either:
+  - Adafruit ItsyBitsy 32U4 3V (Arduino), https://www.digikey.com/short/jw9mwm
+  - Adafruit ItsyBitsy M0 (CircuitPython), https://www.digikey.com/short/j0vqzd 
 - 1 ea. ULN2803 Darlington Driver, [STM ULN2803A](https://www.digikey.com/short/q728f3)
 - 1 ea. CONN IC DIP SOCKET 18POS TIN [On Shore ED18DT](https://www.digikey.com/short/jd3rvh) (optional)
 - 2 ea. JST B5B-XH-A Receptical, [JST B5B-XH-A](https://www.digikey.com/short/qcrr5m)
