@@ -1,26 +1,31 @@
 from turtle import *
 
-arms = 1
-length = 50
+print('Running "turtle_snowflake_example.py"')
+pensize(5)          # pensize & color are not implemented in robot
+pencolor('skyblue')
 
-#setDebug(True)
+number_of_arms = 6  # Change this variable to add arms
+length = 30         # Change is variable to change snowflake size
 
-pendown()
 
-for i in range(arms):
+def draw(length):
+  # this is a simple flunction to draw forward, lift pen, move backward
+  pendown()
   forward(length)
-  '''
-  left(45)
-  forward(length / 2)
-  backward(length / 2)
-  right(90)
-  forward(length / 2)
-  backward(length / 2)
-  left(45)
-  '''
+  penup()
   backward(length)
-  right(360/arms)
-forward(length)
+
+
+for arm in range(number_of_arms):
+  pendown()
+  forward(length * 1.5)
+  right(45)
+  draw(length)
+  left(90)
+  pendown()
+  draw(length)
+  right(45)
+  backward(length * 1.5)
+  left(360 / number_of_arms)
   
-penup()
-done()
+done()  # this releases the motors to save power

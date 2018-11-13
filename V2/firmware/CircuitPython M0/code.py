@@ -16,9 +16,9 @@ Turtle Brain: Adafruit ItstyBitsy M0 Express
 # Open the ".py" file to see what it does
 
 
-import blink
+#import blink
 #import turtle_wheel_calibration
-#import turtle_eye_check
+import turtle_eye_check
 #import turtle_snowflake_example
 #import turtle_font_example
 #import turtle_cursive_example

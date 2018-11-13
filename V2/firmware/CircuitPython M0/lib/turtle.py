@@ -8,7 +8,7 @@ import pulseio
 pwm = pulseio.PWMOut(board.D5, frequency=50)
 
 
-DEBUG = False
+DEBUG = True
 
 _x = 0
 _y = 0
@@ -200,10 +200,17 @@ def goto(x, y):
 	
 
 def pensize(size):
-	pass
+    print('pensize() is not implemented in Turtle Robot')
+    pass
    
+
+def pencolor(color):
+    print('pencolor() is not implemented in Turtle Robot')
+    pass
+
    
 def speed(x):
+    print('speed() is not implemented in Turtle Robot')
     pass
     
     
