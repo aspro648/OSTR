@@ -14,14 +14,25 @@ print('"Running blink.py"')
 led.brightness = 0.3
 # Try shaking it back and forth to see.
 
+# Colors are repesented by the three values (0 - 255) for (red, green, blue)
+red =   (255, 0, 0)
+green = (0, 255, 0)
+blue =  (0, 0, 255)
+
+# Find your favorite color RGB values at https://www.rapidtables.com/web/color/RGB_Color.html
+# and try it.
+myColor = (255, 255, 255)  # What color do you think this is?
+
+# Add a variable 'delayTime' so you can change the speed in one place.
+# Is there a way to generate random numbers?
 
 while True:
-    print("red")
-    led[0] = (255, 0, 0)
+    print("I'm red")
+    led[0] = red
     time.sleep(1)
-    print("green")
-    led[0] = (0, 255, 0)
+    print("I'm green")
+    led[0] = green
     time.sleep(1)
-    print("blue")
-    led[0] = (0, 0, 255)
+    print("I'm blue")
+    led[0] = blue
     time.sleep(1)

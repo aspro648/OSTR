@@ -7,9 +7,8 @@ from turtle import *
 # The LED will illuminate when an object is close enough to reflect IR back to the detector.
 # With board attached to computer, lanuch plotter in Mu to see graphical response rates.
 
-print('\nRunning "turtle_obsticles.py"')
+print('\nRunning "turtle_obstacles.py"')
 
-time.sleep(5)
 # Pin assignments
 leftEmitter = digitalio.DigitalInOut(board.D10)
 leftLED = digitalio.DigitalInOut(board.D7)
@@ -32,24 +31,37 @@ rightEmitter.value = True
 leftEmitter.value = True
 
 
+UP = True     # some alias to help track pen position
+DOWN = False
+penState = UP
+penup()
+
 while True:
     rightVal = rightDetector.value / 65535  # The analog value is 12-bits, thus 0 - 65535
     leftVal = leftDetector.value / 65535    # We convert it to a ratio to make it easier to read.
     
+    #Some code to test servo position using button
+    if button.value:  
+        if penState == DOWN:
+            penup()
+            penState = UP
+            print("penup()")
+    else:
+        if penState == UP:
+            pendown()
+            penState = DOWN
+            print("pendown()")
+            
+    # Check IR values and turn on LED if obstacle detected
     if rightVal < 0.5 or leftVal < 0.5:
-        backward(1)
         if rightVal < 0.5:
             rightLED.value = True
         if leftVal < 0.5:
             leftLED.value = True
-        if rightVal < 0.5 and leftVal <0.5:
-            left(90)
-        elif rightVal <0.5:
-            left(20)
-        else:
-            right(20)
+            
+        # what kind of logic can you add here to help the turtle avoid the obstacle?
 
-    else:
+    else:  #go ahead an move
         forward(1)
         rightLED.value = False  # Turn LED off
         leftLED.value = False

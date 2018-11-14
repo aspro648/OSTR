@@ -13,8 +13,17 @@ They use a rather cryptic method of encoding coordinate pairs using ascii charac
 Since the turtle output is vector (direction and distance), Hershey font codes can be
 converted to turtle code on the fly, giving us access to cursive turtle writing!
 
-You can find just a sample of the codes in 'hersey_codes.txt'.
 '''
+
+# A dictionary for the letters we're going to use. 
+# This is memory intensive, so only add what you need from 'hersey_codes.txt':
+glyphs = {
+    'h': '  658 29M\MVOSRNSLTITGSFQGPIOMNSM[ RM[NXOVQSSRURVSVUUXUZV[W[YZZY\V',
+    'e': '  655 17NXOYQXRWSUSSRRQROSNUNXOZQ[S[UZVYXV',
+    'l': '  662 18OWOVQSTNULVIVGUFSGRIQMPTPZQ[R[TZUYWV',
+    'o': '  665 23LZRRPRNSMTLVLXMZO[Q[SZTYUWUUTSRRQSQURWTXWXYWZV',
+    }
+
 
 letters = 'hello'
 
@@ -29,16 +38,7 @@ def hersheyparse(dat):
     if int(dat[5:8]) - 1 < 2:  # fail if there impossibly few vertices
         return None
     lines = []
-    # individual lines are stored separated by <space>+R
-    # starting at col 11
-    #for s in split(dat[10:], ' R'):
     for s in dat[10:].split(' R'):
-        #print('s= %s' %s)
-        # each line is a list of pairs of coordinates
-        # NB: origin is at centre(ish) of character
-        #     Y coordinates **increase** downwards
-
-        #line = map(None, *[iter(map(char2val, list(s)))] * 2)
         line = []
         i = 0
         temp = list(s)
@@ -59,15 +59,6 @@ def hersheyparse(dat):
         'lines': lines,
         }
     return glyph
-
-
-# a hash for the four chars we're going to use. Lowercase = cursive
-glyphs = {
-    'h': '  658 29M\MVOSRNSLTITGSFQGPIOMNSM[ RM[NXOVQSSRURVSVUUXUZV[W[YZZY\V',
-    'e': '  655 17NXOYQXRWSUSSRRQROSNUNXOZQ[S[UZVYXV',
-    'l': '  662 18OWOVQSTNULVIVGUFSGRIQMPTPZQ[R[TZUYWV',
-    'o': '  665 23LZRRPRNSMTLVLXMZO[Q[SZTYUWUUTSRRQSQURWTXWXYWZV',
-    }
 
 #speed(1)
 x_scale = 3

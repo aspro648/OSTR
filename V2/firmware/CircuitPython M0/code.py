@@ -6,19 +6,20 @@
 # 648.ken@gmail.com
 
 '''
-Turtle Name:  StarMan
+Turtle Name:  Turtle
 Turtle Owner: Ken
-Turtle Brain: Adafruit ItstyBitsy M0 Express 
 '''
 
-# Uncomment the code file below that you would like to execute and save this file.
+# Uncomment the just code file below that you would like to execute and save this file.
 # Click on [Serial] button to see code output.
-# Open the ".py" file to see what it does
+# Open the individual ".py" file to see what it does or modify it.
 
 
-#import blink
+import blink
 #import turtle_wheel_calibration
-import turtle_eye_check
+#import turtle_eye_check
+#import turtle_obstacles
 #import turtle_snowflake_example
+#import mySnowflake
 #import turtle_font_example
 #import turtle_cursive_example

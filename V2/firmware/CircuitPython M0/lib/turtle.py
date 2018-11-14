@@ -1,27 +1,22 @@
 import math, time
 #from analogio import AnalogIn
-import simpleio
 import board
 import digitalio
 import adafruit_motor.servo
 import pulseio
 pwm = pulseio.PWMOut(board.D5, frequency=50)
+from calibration import *
 
+import gc
+gc.collect()
 
-DEBUG = True
+DEBUG = False
 
 _x = 0
 _y = 0
 _heading = 0
 
-# robot specific parameters
-wheel_dia = 51  # mm (increase = decrease distance
-wheel_base = 73.5  # mm (increase = spiral in) 
-PEN_DOWN = 50   # angle of servo when pen is down
-PEN_UP = 0    # angle of servo when pen is up
-
-steps_rev = 512    # 512 for 64x gearbox, 128 for 16x gearbox
-delay_time = 2   # time between steps in ms
+servo = adafruit_motor.servo.Servo(pwm, min_pulse=750, max_pulse=2250)
 
 '''
 leftEmitter = digitalio.DigitalInOut(board.D10)
@@ -29,12 +24,7 @@ leftLED = digitalio.DigitalInOut(board.D7)
 rightEmitter = digitalio.DigitalInOut(board.D13)
 rightLED = digitalio.DigitalInOut(board.D11)
 button = digitalio.DigitalInOut(board.D12)
-'''
 
-#servo = simpleio.Servo(board.D5)
-servo = adafruit_motor.servo.Servo(pwm, min_pulse=750, max_pulse=2250)
-
-'''
 rightDetector = AnalogIn(board.A0)
 leftDetector = AnalogIn(board.A1)
 
@@ -91,7 +81,7 @@ def step(distance):
 def forward(distance):
     global _x, _y, _heading
     steps = step(distance)
-    if DEBUG: print('foward(%s mm) - %s steps' % (distance, steps))
+
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
@@ -109,7 +99,7 @@ def forward(distance):
 def backward(distance):
     global _x, _y, _heading
     steps = step(distance)
-    if DEBUG: print('backward(%s mm) - %s steps' % (distance, steps))
+
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
@@ -129,7 +119,6 @@ def left(degrees):
     rotation = degrees / 360.0
     distance = wheel_base * math.pi * rotation
     steps = step(distance)
-    if DEBUG: print('left(%s deg.) - %s steps' % (degrees, steps))
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
@@ -146,7 +135,6 @@ def right(degrees):
     rotation = degrees / 360.0
     distance = wheel_base * math.pi * rotation
     steps = step(distance)
-    if DEBUG: print('right(%s deg.) - %s steps' % (degrees, steps))
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
@@ -159,17 +147,14 @@ def right(degrees):
 
 
 def penup():
-	if DEBUG: print('penup()') 
 	servo.angle = PEN_UP
   
   
 def pendown():
-	if DEBUG: print('pendown()') 
 	servo.angle = PEN_DOWN
 
          
 def done():
-    if DEBUG: print('done()') 
     for value in range(4):
         L_stepper[value].value = False
         R_stepper[value].value = False
@@ -200,17 +185,17 @@ def goto(x, y):
 	
 
 def pensize(size):
-    print('pensize() is not implemented in Turtle Robot')
+    #print('pensize() is not implemented in Turtle Robot')
     pass
    
 
 def pencolor(color):
-    print('pencolor() is not implemented in Turtle Robot')
+    #print('pencolor() is not implemented in Turtle Robot')
     pass
 
    
 def speed(x):
-    print('speed() is not implemented in Turtle Robot')
+    #print('speed() is not implemented in Turtle Robot')
     pass
     
     
