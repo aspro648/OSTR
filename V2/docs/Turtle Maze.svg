@@ -14,7 +14,7 @@
    viewBox="0 0 215.9 279.4"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="maze.svg">
   <defs
      id="defs2">
@@ -83,15 +83,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.01"
-     inkscape:cx="400.62992"
-     inkscape:cy="28.500334"
+     inkscape:cx="403.60022"
+     inkscape:cy="345.33202"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="in"
-     inkscape:window-width="1520"
-     inkscape:window-height="877"
-     inkscape:window-x="72"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showguides="false">
@@ -113,7 +113,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -371,8 +371,8 @@
            x="22.677166"
            y="885.92126"
            style="stroke-width:0.37795275" /></flowRegion><flowPara
-         id="flowPara4538-0"
-         style="font-size:24px">1 unit</flowPara></flowRoot>    <path
+         style="font-size:24px"
+         id="flowPara4609">100 mm</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 11,292.00001 V 237 h 190 v 55.00001 z"
        id="path6399"
@@ -391,29 +391,24 @@
            y="848.12598"
            style="line-height:0.75" /></flowRegion><flowPara
          id="flowPara6407"
-         style="font-weight:bold;font-size:16px;line-height:0.60000002">Complete the sequence to get your robot from Start to End:</flowPara><flowPara
+         style="font-weight:bold;font-size:16px;line-height:0.60000002">Complete the sequence to get your robot from Start to End.  Bonus for using loops.</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.75;font-family:Consolas;-inkscape-font-specification:Consolas"
          id="flowPara6409"><flowSpan
+           style="line-height:0.60000002"
+           id="flowSpan6411"> forward(400)</flowSpan></flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.75;font-family:Consolas;-inkscape-font-specification:Consolas"
+         id="flowPara4613"><flowSpan
    style="line-height:0.60000002"
-   id="flowSpan6411"> forward(4), right(90), </flowSpan>...</flowPara></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 16,252 h 180 v 0"
-       id="path6421"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 16,262 H 196"
-       id="path6423"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 16,272 H 196"
-       id="path6425"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 16,282 H 196"
-       id="path6427"
-       inkscape:connector-curvature="0" />
+   id="flowSpan4615"> right(90), </flowSpan>...</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.96875px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="36"
+       y="192"
+       id="text4619"><tspan
+         sodipodi:role="line"
+         id="tspan4617"
+         x="36"
+         y="195.6208"
+         style="stroke-width:0.26458332px" /></text>
   </g>
 </svg>

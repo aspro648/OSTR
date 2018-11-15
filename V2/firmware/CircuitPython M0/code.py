@@ -23,3 +23,4 @@ import blink
 #import mySnowflake
 #import turtle_font_example
 #import turtle_cursive_example
+#import turtle_goto_example
