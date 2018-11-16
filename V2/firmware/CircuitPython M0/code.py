@@ -15,8 +15,8 @@ Turtle Owner: Ken
 # Open the individual ".py" file to see what it does or modify it.
 
 
-import blink
-#import turtle_wheel_calibration
+#import blink
+import turtle_wheel_calibration
 #import turtle_eye_check
 #import turtle_obstacles
 #import turtle_snowflake_example
