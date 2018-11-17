@@ -14,8 +14,11 @@
    viewBox="0 0 215.9 279.4"
    version="1.1"
    id="svg1045"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="Turtle goto.svg">
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Turtle goto.svg"
+   inkscape:export-filename="C:\Users\Maker's Box\Documents\git\OSTR\V2\docs\Turtle goto.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs1039" />
   <sodipodi:namedview
@@ -26,15 +29,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="353.93486"
-     inkscape:cy="630.71068"
+     inkscape:cx="408"
+     inkscape:cy="532.72304"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1858"
-     inkscape:window-height="1058"
-     inkscape:window-x="54"
+     inkscape:window-width="1534"
+     inkscape:window-height="877"
+     inkscape:window-x="58"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -45,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -330,7 +333,7 @@
        xml:space="preserve"
        id="flowRoot6855-3-94"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(0.26458333,0,0,0.26458333,-130.9488,-72.167278)"><flowRegion
+       transform="matrix(0.26458333,0,0,0.26458333,-130.64932,-71.632739)"><flowRegion
          id="flowRegion6857-9-5"><rect
            id="rect6859-6-3"
            width="107.93892"
@@ -417,7 +420,7 @@
            x="24.243662"
            y="19.583488"
            style="-inkscape-font-specification:'Rockwell Extra Bold, ';font-family:'Rockwell Extra Bold';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
-         id="flowPara1772"></flowPara></flowRoot>    <text
+         id="flowPara1772" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.96875px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="50.699306"
@@ -438,7 +441,7 @@
          id="tspan1778"
          x="-65.21376"
          y="53.663769"
-         style="stroke-width:0.26458332px"></tspan></text>
+         style="stroke-width:0.26458332px" /></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot1782"
@@ -475,9 +478,21 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#4d4d4d;"
          id="flowPara1825">          (28, -28), (16, -36), (4, -24), (8, -8), (0, 0)]</flowPara><flowPara
          id="flowPara1817"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#4d4d4d;"></flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#4d4d4d;" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#4d4d4d;"
          id="flowPara1827">for point in points:</flowPara><flowPara
          id="flowPara1819"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#4d4d4d;">    goto(point)</flowPara></flowRoot>  </g>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#4d4d4d;">    goto(point)</flowPara></flowRoot>    <circle
+       style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.05291666;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6873-4"
+       cx="107.97689"
+       cy="236.32982"
+       r="0.99999976" />
+    <circle
+       style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.05291666;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6873-6"
+       cx="7.7508163"
+       cy="236.32982"
+       r="0.99999976" />
+  </g>
 </svg>

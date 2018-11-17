@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="Robot Datasheet.svg"
-   inkscape:export-filename="C:\Users\MakersBox\Documents\git\KiCad\projects\ChickTech_Robot\docs\datasheet.png"
+   inkscape:export-filename="C:\Users\Maker's Box\Documents\git\OSTR\V2\docs\Robot Datasheet.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150">
   <defs
@@ -29,9 +29,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.55981979"
+     inkscape:zoom="1.1196396"
      inkscape:cx="446.40075"
-     inkscape:cy="523.13336"
+     inkscape:cy="295.08196"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -31511,16 +31511,16 @@ Xd//AH7/2Q==
        transform="translate(238.87941,10.640952)"><flowRegion
          id="flowRegion4170-0-9"><rect
            id="rect4172-28-0"
-           width="519.64203"
-           height="60.215271"
+           width="360.1723"
+           height="123.18677"
            x="53.448277"
            y="221.03448" /></flowRegion><flowPara
          id="flowPara4174-7-6"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:30px;line-height:100%;font-family:Ken;-inkscape-font-specification:'Ken Medium'" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:30px;line-height:100%;font-family:Ken;-inkscape-font-specification:'Ken Medium'"
-         id="flowPara4209-9-8">Motion: 2 x 28byj Stepper Motors</flowPara><flowPara
+         id="flowPara4209-9-8">Motion: 2 x 28byj 5 volt</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:30px;line-height:100%;font-family:Ken;-inkscape-font-specification:'Ken Medium'"
-         id="flowPara211-3">5V 1/64 Ratio</flowPara><flowPara
+         id="flowPara211-3">Stepper Motors 1:4 Ratio</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:100%;font-family:Consolas;-inkscape-font-specification:Consolas"
          id="flowPara4219-6-6"> </flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
@@ -31678,5 +31678,53 @@ Xd//AH7/2Q==
            height="144"
            x="576"
            y="816" /></flowRegion><flowPara
-         id="flowPara585"></flowPara></flowRoot>  </g>
+         id="flowPara585"></flowPara></flowRoot>    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 573.75,534.86221 v 0 l -135,-45 v 0"
+       id="path589"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 596.25,444.86221 -67.5,22.5"
+       id="path5085"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 573.75,332.36221 H 495 v 0"
+       id="path5087"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 483.75,579.86221 -22.5,-22.5 v 0"
+       id="path5089"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.25,467.36221 -45,90 180,-33.75"
+       id="path5091"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 202.5,343.61221 67.5,45"
+       id="path5093"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 270,411.11221 -146.25,-11.25 123.75,56.25"
+       id="path5095"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 393.75,309.86221 11.25,-22.5 45,56.25"
+       id="path5097"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#008000;stroke-width:2.8125;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 123.75,489.86221 h 157.5"
+       id="path5099"
+       inkscape:connector-curvature="0" />
+  </g>
 </svg>
