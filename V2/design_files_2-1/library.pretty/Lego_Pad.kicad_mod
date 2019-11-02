@@ -1,0 +1,11 @@
+(module myFootPrints:Lego_Pad (layer F.Cu) (tedit 59BB65D8)
+  (descr "Through hole pin header")
+  (tags "pin header")
+  (fp_text reference P9 (at 0 0) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value CONN_01X01 (at 0 -1.27) (layer F.Fab) hide
+    (effects (font (size 0.127 0.127) (thickness 0.03175)))
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 3.25 3.25) (drill 3.25) (layers *.Cu *.Mask))
+)

@@ -1,0 +1,1 @@
+Adafruit CircuitPython 3.1.1 on 2018-11-02; Adafruit ItsyBitsy M0 Express with samd21g18
