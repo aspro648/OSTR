@@ -5,6 +5,11 @@
 # https://github.com/aspro648/OSTR/
 # 648.ken@gmail.com
 
+# Class Links:
+#  https://www.tinkercad.com/joinclass/6I6RPXA9QDII
+#  https://groklearning.com/hoc/activity/snowflake/
+#  https://studio.code.org/s/frozen/stage/1/puzzle/1
+
 '''
 Turtle Name:  Turtle
 Turtle Owner: Ken
