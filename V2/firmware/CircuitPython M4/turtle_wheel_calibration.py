@@ -15,7 +15,7 @@ pendown()
 sleep(1)
 
 # draw four squares to determine if wheel parameters are correct
-for turns in range(1):
+for turns in range(4):
     for x in range(4):
         forward(100)
         right(90)
