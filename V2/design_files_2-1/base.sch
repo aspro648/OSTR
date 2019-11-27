@@ -378,7 +378,7 @@ L R R2
 U 1 1 59FA7F9D
 P 6250 5600
 F 0 "R2" V 6330 5600 50  0000 C CNN
-F 1 "47" V 6250 5600 50  0000 C CNN
+F 1 "330" V 6250 5600 50  0000 C CNN
 F 2 "library:Resistor_Horz" V 6180 5600 50  0001 C CNN
 F 3 "" H 6250 5600 50  0000 C CNN
 	1    6250 5600
@@ -389,7 +389,7 @@ L R R5
 U 1 1 59FA7FFE
 P 5350 5600
 F 0 "R5" V 5430 5600 50  0000 C CNN
-F 1 "47" V 5350 5600 50  0000 C CNN
+F 1 "330" V 5350 5600 50  0000 C CNN
 F 2 "library:Resistor_Horz" V 5280 5600 50  0001 C CNN
 F 3 "" H 5350 5600 50  0000 C CNN
 	1    5350 5600
@@ -553,7 +553,7 @@ Text Label 5850 3450 0    60   ~ 0
 A5
 Text Label 5850 3350 0    60   ~ 0
 A4
-Text Label 5850 3250 0    60   ~ 0
+Text Label 3850 5250 0    60   ~ 0
 A3
 Text Label 5850 3150 0    60   ~ 0
 D13
@@ -565,19 +565,19 @@ Text Label 5850 3750 0    60   ~ 0
 D14
 Text Label 5850 3850 0    60   ~ 0
 D9
-Text Label 3850 4750 0    60   ~ 0
+Text Label 6950 2500 0    60   ~ 0
 A1
-Text Label 3850 5250 0    60   ~ 0
+Text Label 3850 4750 0    60   ~ 0
 A2
 Text Label 3850 5050 0    60   ~ 0
 D7
-Text Label 2500 5300 0    60   ~ 0
+Text Label 5850 3250 0    60   ~ 0
 D10
 Text Label 3850 4950 0    60   ~ 0
 D11
 Text Label 3850 5350 0    60   ~ 0
 D12
-Text Label 6950 2500 0    60   ~ 0
+Text Label 3300 4900 0    60   ~ 0
 D5
 NoConn ~ 2850 2800
 NoConn ~ 4150 3000
@@ -783,88 +783,24 @@ Wire Wire Line
 Wire Wire Line
 	4600 5350 3850 5350
 Wire Wire Line
-	4800 3800 4800 4500
+	4800 3800 4800 4250
 Connection ~ 4600 4250
 Connection ~ 4600 4550
 Connection ~ 4800 4250
 Connection ~ 4800 4550
-$Comp
-L Q_NPN_EBC Q3
-U 1 1 5DB780E7
-P 3200 5000
-F 0 "Q3" H 3400 5050 50  0000 L CNN
-F 1 "2N4401" H 3400 4950 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 3400 5100 50  0001 C CNN
-F 3 "" H 3200 5000 50  0001 C CNN
-	1    3200 5000
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3550 4850 3550 5150
 Wire Wire Line
-	3550 4900 3400 4900
+	3550 4900 3300 4900
 Connection ~ 3550 4900
-$Comp
-L R R9
-U 1 1 5DB78348
-P 2900 5300
-F 0 "R9" V 2980 5300 50  0000 C CNN
-F 1 "1000" V 2900 5300 50  0000 C CNN
-F 2 "library:Resistor_Horz" V 2830 5300 50  0001 C CNN
-F 3 "" H 2900 5300 50  0000 C CNN
-	1    2900 5300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2500 5300 2750 5300
-$Comp
-L R R10
-U 1 1 5DB7854E
-P 3200 5550
-F 0 "R10" V 3280 5550 50  0000 C CNN
-F 1 "10K" V 3200 5550 50  0000 C CNN
-F 2 "library:Resistor_Horz" V 3130 5550 50  0001 C CNN
-F 3 "" H 3200 5550 50  0000 C CNN
-	1    3200 5550
-	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR016
-U 1 1 5DB785DC
-P 3200 5800
-F 0 "#PWR016" H 3200 5550 50  0001 C CNN
-F 1 "GND" H 3200 5650 50  0000 C CNN
-F 2 "" H 3200 5800 60  0000 C CNN
-F 3 "" H 3200 5800 60  0000 C CNN
-	1    3200 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR017
-U 1 1 5DB786A0
-P 2800 4800
-F 0 "#PWR017" H 2800 4650 50  0001 C CNN
-F 1 "+3.3V" H 2800 4940 50  0000 C CNN
-F 2 "" H 2800 4800 50  0001 C CNN
-F 3 "" H 2800 4800 50  0001 C CNN
-	1    2800 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2800 4800 2800 4900
-Wire Wire Line
-	2800 4900 3000 4900
-Wire Wire Line
-	3050 5300 3200 5300
-Wire Wire Line
-	3200 5200 3200 5400
-Connection ~ 3200 5300
-Wire Wire Line
-	3200 5700 3200 5800
-Wire Wire Line
-	4600 3900 4600 5250
 Connection ~ 4600 5250
 Wire Wire Line
 	4800 4550 4800 4750
 Connection ~ 4800 4750
+Wire Wire Line
+	4600 3900 4600 4250
+Wire Wire Line
+	4600 4550 4600 5250
+Text Notes 7100 5300 0    60   ~ 0
+IR 1.2Vf 330 ohm 12 mA @ 5V
 $EndSCHEMATC
