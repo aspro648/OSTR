@@ -19,13 +19,14 @@ Turtle Owner: Ken
 # Click on [Serial] button to see code output.
 # Open the individual ".py" file to see what it does or modify it.
 
+print("Hello!  Edit 'code.py' to change the robots behavor.\n")
 
 #import blink
-#import turtle_wheel_calibration
+import turtle_wheel_calibration
 #import turtle_eye_check
 #import turtle_obstacles
 #import turtle_snowflake_example
 #import mySnowflake
 #import turtle_font_example
-import turtle_cursive_example
+#import turtle_cursive_example
 #import turtle_goto_example

@@ -1,6 +1,5 @@
 from turtle import *
 
-# From https://groklearning.com/hoc/activity/snowflake/
 print('Running "turtle_snowflake_example.py"')
 pensize(5)          # pensize & color are not implemented in robot
 pencolor('skyblue')
