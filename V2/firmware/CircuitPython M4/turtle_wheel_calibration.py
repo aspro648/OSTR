@@ -1,11 +1,10 @@
 from turtle import *
-from calibration import *
 global scale
 from time import sleep
 
 
 print('\nRunning "turtle_wheel_calibration.py".\n')
-print('The following parameters are saved in "calibration.py":')
+print('The following parameters are saved in "lib/turtle.py":')
 print('    wheel_dia = %s mm (increase = decrease distance)' % wheel_dia)
 print('    wheel_base = %s mm (increase = spiral in) ' % wheel_base)
 print('    PEN_UP angle = %s' % PEN_UP)

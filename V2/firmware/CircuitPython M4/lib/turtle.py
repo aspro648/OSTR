@@ -68,7 +68,7 @@ patterns = [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 1, 1], [1, 0, 0, 1]]
 def setDebug(val):
     global DEBUG
     DEBUG = val
-    
+
 
 def step(distance):
     steps = distance * steps_rev / (wheel_dia * math.pi)
@@ -89,7 +89,7 @@ def forward(distance):
                 R_stepper[bit].value = patterns[::-1][pattern][bit]
             time.sleep(delay_time/1000)
 
-    # new point 
+    # new point
     deltax = distance * math.cos(math.radians(_heading))
     deltay = distance * math.sin(math.radians(_heading))
     _x = _x + deltax
@@ -106,8 +106,8 @@ def backward(distance):
                 R_stepper[bit].value = patterns[pattern][bit]
                 L_stepper[bit].value = patterns[::-1][pattern][bit]
             time.sleep(delay_time/1000)
- 
-    # new point 
+
+    # new point
     deltax = distance * math.cos(math.radians(_heading - 180))
     deltay = distance * math.sin(math.radians(_heading - 180))
     _x = _x + deltax
@@ -148,12 +148,12 @@ def right(degrees):
 
 def penup():
 	servo.angle = PEN_UP
-  
-  
+
+
 def pendown():
 	servo.angle = PEN_DOWN
 
-         
+
 def done():
     for value in range(4):
         L_stepper[value].value = False
@@ -187,26 +187,26 @@ def goto(x, y):
 def pensize(size):
     #print('pensize() is not implemented in Turtle Robot')
     pass
-   
+
 
 def pencolor(color):
     #print('pencolor() is not implemented in Turtle Robot')
     pass
 
-   
+
 def speed(x):
     #print('speed() is not implemented in Turtle Robot')
     pass
-    
-    
+
+
 def position():
     return _x, _y
-    
-    
+
+
 def heading():
     return _heading
 
-    
+
 def distance(pointA, pointB):
     return abs((pointB[0] - pointA[0])**2  + (pointB[1] - pointA[1])**2)**0.5
 

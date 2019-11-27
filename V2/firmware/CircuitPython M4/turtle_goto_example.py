@@ -11,7 +11,9 @@ points = [(0, 0), (-8, -8), (-4, -24), (-16, -36), (-28, -28), (-36, -32), (-24,
           (28, -28), (16, -36), (4, -24), (8, -8), (0, 0)]
 
 for point in points:
-    goto(point)
+    x, y = point
+    print("goto(%s, %s)" % (x,y))
+    goto(x, y)
 
 done()
 
