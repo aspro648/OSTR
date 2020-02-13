@@ -21,8 +21,7 @@ Turtle Board Kit:
 - 1 ea. 1 uF cap, [AVX SR205E105MAR](http://www.digikey.com/short/747wv0)
 - 2 ea. Photo Transistor, https://www.digikey.com/short/jw9ht0
 - 2 ea. IR Emitter 940nm 1.2V, https://www.digikey.com/short/jw9m1r
-- 2 ea. 100 ohm resistor 1/8W, https://www.digikey.com/short/q72818)
-- 2 ea. 330 ohm resistor 1/8W, [Stackpole CF18JT330R](https://www.digikey.com/short/jzr35t)
+- 4 ea. 330 ohm resistor 1/8W, [Stackpole CF18JT330R](https://www.digikey.com/short/jzr35t)
 - 2 ea. 10K resistor 1/8W, 
 - 2 ea. 3mm LEDs, [Wurth 151031VS06000](http://www.digikey.com/short/3335hz)
 
