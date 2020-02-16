@@ -5,8 +5,12 @@
 
 from turtle import *
 import math
-from hersey_font import cursive as glyphs
-
+try:
+    from hersey_font import cursive as glyphs
+except ImportError:
+    import sys
+    print('\nError: Need file "/lib/hersey_font.py"')
+    sys.exit()
 
 '''
 Hershey fonts were developed in the 1960s for rendering text on cathode ray tube displays.
@@ -20,10 +24,10 @@ use either:
 
 '''
 
-print('Example of using vector fonts from turtle_cursivee_example.py')
+print('Example of using vector fonts from turtle_cursive_example.py')
 
-# Additional fonts in 'hersey_codes.txt'.
-# Save them in glyph dictionary in 'hersey_script.py'.
+# Additional fonts in '/lib/hersey_codes.txt'.
+# Save them in glyph dictionary in '/lib/hersey_font.py'.
 
 
 letters = "Hello"

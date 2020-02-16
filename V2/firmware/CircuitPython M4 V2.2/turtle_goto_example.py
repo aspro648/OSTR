@@ -1,5 +1,11 @@
 from turtle import *
 
+'''
+This code will run on the Turtle Robot or on a laptop.
+Pensize() & color() are not implemented in robot, but will
+not cause an error.
+'''
+
 print('Example of using goto(x, y) from turtle_goto.py')
 
 # These are the points used for generating the "turtle" icon
@@ -16,5 +22,4 @@ for point in points:
     goto(x, y)
 
 done()
-
 

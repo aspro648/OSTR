@@ -1,5 +1,14 @@
 from turtle import *
 
+'''
+Learn how to make a snowflake at
+https://groklearning.com/hoc/activity/snowflake/
+
+This code will run on the Turtle Robot or on a laptop.
+Pensize() & color() are not implemented in robot, but will
+not cause an error.
+'''
+
 print('Running "turtle_snowflake_example.py"')
 pensize(5)          # pensize & color are not implemented in robot
 pencolor('skyblue')
@@ -27,5 +36,5 @@ for arm in range(number_of_arms):
   right(45)
   backward(length * 1.5)
   left(360 / number_of_arms)
-  
+
 done()  # this releases the motors to save power

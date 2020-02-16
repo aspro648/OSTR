@@ -1,10 +1,13 @@
+# Pinouts for Turtle Robot board 2.1 and 2.2
+
 import math, time
-#from analogio import AnalogIn
 import board
 import digitalio
 import adafruit_motor.servo
+from analogio import AnalogIn
 import pulseio
-pwm = pulseio.PWMOut(board.D5, frequency=50)
+pwm = pulseio.PWMOut(board.A1, frequency=50)
+
 from calibration import *
 
 import gc
@@ -12,37 +15,31 @@ gc.collect()
 
 DEBUG = False
 
-_x = 0
-_y = 0
-_heading = 0
-
-servo = adafruit_motor.servo.Servo(pwm, min_pulse=750, max_pulse=2250)
-
-'''
-leftEmitter = digitalio.DigitalInOut(board.D10)
+# Pin assignments
+emitter = digitalio.DigitalInOut(board.D5)
 leftLED = digitalio.DigitalInOut(board.D7)
-rightEmitter = digitalio.DigitalInOut(board.D13)
 rightLED = digitalio.DigitalInOut(board.D11)
 button = digitalio.DigitalInOut(board.D12)
+rightDetector = AnalogIn(board.A2)
+leftDetector = AnalogIn(board.A3)
 
-rightDetector = AnalogIn(board.A0)
-leftDetector = AnalogIn(board.A1)
-
+# Port setup
 leftLED.direction = digitalio.Direction.OUTPUT
-leftEmitter.direction = digitalio.Direction.OUTPUT
+emitter.direction = digitalio.Direction.OUTPUT
 rightLED.direction = digitalio.Direction.OUTPUT
-rightEmitter.direction = digitalio.Direction.OUTPUT
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
 
-# turn on IR
-leftEmitter.value = True
-rightEmitter.value = True
-'''
+_x = 0
+_y = 0
+_heading = 0
+frac_error = 0
+
+servo = adafruit_motor.servo.Servo(pwm, min_pulse = min_pulse, max_pulse = max_pulse)
 
 # [wires blue->pink->yel->org]
-Lstep0 = digitalio.DigitalInOut(board.A2)
-Lstep1 = digitalio.DigitalInOut(board.A3)
+Lstep0 = digitalio.DigitalInOut(board.D13)
+Lstep1 = digitalio.DigitalInOut(board.D10)
 Lstep2 = digitalio.DigitalInOut(board.A4)
 Lstep3 = digitalio.DigitalInOut(board.A5)
 
@@ -72,15 +69,17 @@ def setDebug(val):
 
 def step(distance):
     steps = distance * steps_rev / (wheel_dia * math.pi)
-    if steps-int(steps) > 0.5:
-        return int(steps + 1)
+    frac = steps-int(steps)
+    if frac > 0.5:
+        return int(steps + 1), 1 - frac
     else:
-        return int(steps)
+        return int(steps), -frac
 
 
 def forward(distance):
     global _x, _y, _heading
-    steps = step(distance)
+    steps, frac = step(distance)
+    if DEBUG: print("forward(%s)" % distance)
 
     for x in range(steps):
         for pattern in range(len(patterns)):
@@ -98,7 +97,8 @@ def forward(distance):
 
 def backward(distance):
     global _x, _y, _heading
-    steps = step(distance)
+    steps, frac = step(distance)
+    if DEBUG: print("backward(%s) % distance")
 
     for x in range(steps):
         for pattern in range(len(patterns)):
@@ -115,10 +115,12 @@ def backward(distance):
 
 
 def left(degrees):
-    global _x, _y, _heading
+    global _x, _y, _heading, frac_error
+    if DEBUG: print("left(%s)" % degrees)
     rotation = degrees / 360.0
     distance = wheel_base * math.pi * rotation
-    steps = step(distance)
+    steps, frac = step(distance)
+    frac_error += frac
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
@@ -128,13 +130,15 @@ def left(degrees):
     _heading = _heading + degrees
     while _heading > 360:
         _heading = _heading - 360
+    if False: print("steps=%s, frac_error=%s" % (steps, frac_error))
 
 
 def right(degrees):
     global _x, _y, _heading
+    if DEBUG: print("right(%s)" % degrees)
     rotation = degrees / 360.0
     distance = wheel_base * math.pi * rotation
-    steps = step(distance)
+    steps, frac = step(distance)
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
@@ -147,24 +151,24 @@ def right(degrees):
 
 
 def penup():
-	servo.angle = PEN_UP
-
+    servo.angle = PEN_UP
+    if DEBUG: print("penup()")
 
 def pendown():
-	servo.angle = PEN_DOWN
-
+    servo.angle = PEN_DOWN
+    if DEBUG: print("pendown()")
 
 def done():
     for value in range(4):
         L_stepper[value].value = False
         R_stepper[value].value = False
-		
+if DEBUG: print("done()")
 		
 def goto(x, y):
     center_x, center_y = position()
     bearing = getBearing(x, y, center_x, center_y)
     trnRight = heading() - bearing
-    #print('trnRight = %s' % trnRight)
+    if DEBUG: print("goto(%s, %s)" % (x, y))
     if abs(trnRight) > 180:
         if trnRight >= 0:
             left(360 - trnRight)
@@ -185,17 +189,17 @@ def goto(x, y):
 	
 
 def pensize(size):
-    #print('pensize() is not implemented in Turtle Robot')
+    print('pensize() is not implemented in Turtle Robot')
     pass
 
 
 def pencolor(color):
-    #print('pencolor() is not implemented in Turtle Robot')
+    print('pencolor() is not implemented in Turtle Robot')
     pass
 
 
 def speed(x):
-    #print('speed() is not implemented in Turtle Robot')
+    print('speed() is not implemented in Turtle Robot')
     pass
 
 
@@ -218,3 +222,61 @@ def getBearing(x, y, center_x, center_y):
     #bearing2 = (90 - angle) % 360
     #print "gb: x=%2d y=%2d angle=%6.1f bearing=%5.1f bearing2=%5.1f" % (x, y, angle, bearing1, bearing2)
     return bearing
+
+
+def circle(radius, extent = None, steps = None):
+    """ Draw a circle with given radius.
+
+    Arguments:
+    radius -- a number
+    extent (optional) -- a number
+    steps (optional) -- an integer
+
+    Draw a circle with given radius. The center is radius units left
+    of the turtle; extent - an angle - determines which part of the
+    circle is drawn. If extent is not given, draw the entire circle.
+    If extent is not a full circle, one endpoint of the arc is the
+    current pen position. Draw the arc in counterclockwise direction
+    if radius is positive, otherwise in clockwise direction. Finally
+    the direction of the turtle is changed by the amount of extent.
+
+    As the circle is approximated by an inscribed regular polygon,
+    steps determines the number of steps to use. If not given,
+    it will be calculated automatically. Maybe used to draw regular
+    polygons.
+
+    call: circle(radius)                  # full circle
+    --or: circle(radius, extent)          # arc
+    --or: circle(radius, extent, steps)
+    --or: circle(radius, steps=6)         # 6-sided polygon
+
+    Example (for a Turtle instance named turtle):
+    >>> turtle.circle(50)
+    >>> turtle.circle(120, 180)  # semicircle
+    """
+
+    if extent is None:
+        extent = 360
+    if steps is None:
+        frac = abs(extent)/360
+        #print("frac = %s" % frac)
+        steps = 1+int(min(11+abs(radius)/6.0, 59.0)*frac)
+    w = 1.0 * extent / steps
+    w2 = 0.5 * w
+    l = 2.0 * radius * math.sin(w2*math.pi/180.0)
+    if radius < 0:
+        l, w, w2 = -l, -w, -w2
+    if DEBUG: print("circle(%s, extent=%s, steps=%s)" % (radius, extent, steps))
+    if False:
+        print("l (step length) = %s" % l)
+        print("w (turn angle)= %s" % w)		
+        print("w2 (inital rotation) = %s" % w2)
+
+        print("steps = %s" % steps)	
+        print("extent = %s" % extent)
+        #print("self._degreesPerAU = %s" % self._degreesPerAU)
+    left(w2)
+    for i in range(steps):
+        forward(l)
+        left(w)
+    left(-w2)
