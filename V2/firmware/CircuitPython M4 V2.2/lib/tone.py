@@ -12,8 +12,8 @@ def tone(frequency, duration):
 
 
 # play 3 random notes on startup
-for x in range(3):
+for x in range(5):
     frequency = random.random()*800+100
     duration = random.random()/8
     tone(frequency, duration)
-    print("tone(%s, %s)" % (frequency, duration))
+    if False: print("tone(%s, %s)" % (frequency, duration))

@@ -1,6 +1,7 @@
 '''
-Turtle Robot (V2.1) design files and details at
-https://github.com/aspro648/OSTR/
+Turtle Robot (V2.1) https://github.com/aspro648/OSTR/
+@TheMakersBox
+#TurtleRobot
 648.ken@gmail.com
 
 You have an Adafruit ItsyBitsy M4:
@@ -10,6 +11,11 @@ Running CiruitPython version 4.1.0
 Download Mu Editor at https://codewith.mu/en/download
 
 Workshop Links:
+  Handouts: https://github.com/aspro648/OSTR/raw/master/V2/docs/Robotics_Handouts.pdf
+  Mechanical Assembly: https://github.com/aspro648/OSTR/raw/master/V2/docs/Mechanical_Assembly.pdf
+  Name Plate Design: https://github.com/aspro648/OSTR/raw/master/V2/docs/Name_Plate_3D_Design.pdf
+
+Activites:
   https://www.tinkercad.com/joinclass/6I6RPXA9QDII
   https://groklearning.com/hoc/activity/snowflake/
   https://studio.code.org/s/frozen/stage/1/puzzle/1

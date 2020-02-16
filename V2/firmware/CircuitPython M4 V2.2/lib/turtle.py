@@ -24,18 +24,11 @@ rightDetector = AnalogIn(board.A2)
 leftDetector = AnalogIn(board.A3)
 
 # Port setup
-leftLED.direction = digitalio.Direction.OUTPUT
 emitter.direction = digitalio.Direction.OUTPUT
+leftLED.direction = digitalio.Direction.OUTPUT
 rightLED.direction = digitalio.Direction.OUTPUT
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
-
-_x = 0
-_y = 0
-_heading = 0
-frac_error = 0
-
-servo = adafruit_motor.servo.Servo(pwm, min_pulse = min_pulse, max_pulse = max_pulse)
 
 # [wires blue->pink->yel->org]
 Lstep0 = digitalio.DigitalInOut(board.D13)
@@ -61,6 +54,14 @@ for wire in R_stepper:
 # stepper patterns
 patterns = [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 1, 1], [1, 0, 0, 1]]
 
+_x = 0
+_y = 0
+_heading = 0
+frac_error = 0
+spacer = ''
+
+servo = adafruit_motor.servo.Servo(pwm, min_pulse = min_pulse, max_pulse = max_pulse)
+
 
 def setDebug(val):
     global DEBUG
@@ -79,7 +80,7 @@ def step(distance):
 def forward(distance):
     global _x, _y, _heading
     steps, frac = step(distance)
-    if DEBUG: print("forward(%s)" % distance)
+    if DEBUG: print("%sforward(%s)" % (spacer, distance))
 
     for x in range(steps):
         for pattern in range(len(patterns)):
@@ -98,7 +99,7 @@ def forward(distance):
 def backward(distance):
     global _x, _y, _heading
     steps, frac = step(distance)
-    if DEBUG: print("backward(%s) % distance")
+    if DEBUG: print("%sbackward(%s)" % (spacer, distance))
 
     for x in range(steps):
         for pattern in range(len(patterns)):
@@ -116,7 +117,7 @@ def backward(distance):
 
 def left(degrees):
     global _x, _y, _heading, frac_error
-    if DEBUG: print("left(%s)" % degrees)
+    if DEBUG: print("%sleft(%s)" % (spacer, degrees))
     rotation = degrees / 360.0
     distance = wheel_base * math.pi * rotation
     steps, frac = step(distance)
@@ -135,7 +136,7 @@ def left(degrees):
 
 def right(degrees):
     global _x, _y, _heading
-    if DEBUG: print("right(%s)" % degrees)
+    if DEBUG: print("%sright(%s)" % (spacer, degrees))
     rotation = degrees / 360.0
     distance = wheel_base * math.pi * rotation
     steps, frac = step(distance)
@@ -162,9 +163,11 @@ def done():
     for value in range(4):
         L_stepper[value].value = False
         R_stepper[value].value = False
-if DEBUG: print("done()")
+    if DEBUG: print("done()")
 		
 def goto(x, y):
+    global spacer
+    spacer = '    ' # offsets debug statements after "goto(x, y)"
     center_x, center_y = position()
     bearing = getBearing(x, y, center_x, center_y)
     trnRight = heading() - bearing
@@ -185,6 +188,7 @@ def goto(x, y):
             #if DEBUG: print('left(%s)' % -trnRight)
     dist = distance(tuple(position()), (x, y))
     forward(dist)
+    spacer = ''
     #if DEBUG: print('forward(%s)' % dist)
 	
 
