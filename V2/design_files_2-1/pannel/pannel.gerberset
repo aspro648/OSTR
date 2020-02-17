@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GerberLayoutSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <LoadedOutlines>
-    <string>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
-    <string>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
-    <string>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
-    <string>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
+    <string>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
+    <string>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
+    <string>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
+    <string>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
+    <string>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</string>
   </LoadedOutlines>
   <Instances>
     <GerberInstance>
@@ -13,7 +14,7 @@
         <Y>118.11</Y>
       </Center>
       <Angle>0</Angle>
-      <GerberPath>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
+      <GerberPath>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
       <Generated>false</Generated>
     </GerberInstance>
     <GerberInstance>
@@ -22,7 +23,7 @@
         <Y>-60.92</Y>
       </Center>
       <Angle>90</Angle>
-      <GerberPath>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
+      <GerberPath>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
       <Generated>false</Generated>
     </GerberInstance>
     <GerberInstance>
@@ -31,7 +32,7 @@
         <Y>118.11</Y>
       </Center>
       <Angle>0</Angle>
-      <GerberPath>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
+      <GerberPath>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
       <Generated>false</Generated>
     </GerberInstance>
     <GerberInstance>
@@ -40,15 +41,24 @@
         <Y>118.11</Y>
       </Center>
       <Angle>0</Angle>
-      <GerberPath>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
+      <GerberPath>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
+      <Generated>false</Generated>
+    </GerberInstance>
+    <GerberInstance>
+      <Center>
+        <X>-20</X>
+        <Y>-20</Y>
+      </Center>
+      <Angle>0</Angle>
+      <GerberPath>C:\Users\Maker's Box\Documents\git\OSTR\V2\design_files_2-1\gerbers\OSTR22.zip</GerberPath>
       <Generated>false</Generated>
     </GerberInstance>
   </Instances>
   <Tabs>
     <BreakTab>
       <Center>
-        <X>67.11211</X>
-        <Y>48.06278</Y>
+        <X>14.6635942</X>
+        <Y>59.62212</Y>
       </Center>
       <Angle>0</Angle>
       <Radius>3</Radius>
@@ -56,8 +66,8 @@
     </BreakTab>
     <BreakTab>
       <Center>
-        <X>67.11211</X>
-        <Y>10.2869968</Y>
+        <X>47.84332</X>
+        <Y>59.62212</Y>
       </Center>
       <Angle>0</Angle>
       <Radius>3</Radius>
@@ -65,8 +75,8 @@
     </BreakTab>
     <BreakTab>
       <Center>
-        <X>9.964127</X>
-        <Y>59.8475342</Y>
+        <X>32.7465439</X>
+        <Y>30.2580643</Y>
       </Center>
       <Angle>0</Angle>
       <Radius>3</Radius>
@@ -74,17 +84,8 @@
     </BreakTab>
     <BreakTab>
       <Center>
-        <X>32.72646</X>
-        <Y>30.3049335</Y>
-      </Center>
-      <Angle>0</Angle>
-      <Radius>3</Radius>
-      <Valid>false</Valid>
-    </BreakTab>
-    <BreakTab>
-      <Center>
-        <X>48.70852</X>
-        <Y>59.8475342</Y>
+        <X>66.92166</X>
+        <Y>29.59447</Y>
       </Center>
       <Angle>0</Angle>
       <Radius>3</Radius>
@@ -99,6 +100,6 @@
   <Smoothing>1</Smoothing>
   <ExtraTabDrillDistance>0</ExtraTabDrillDistance>
   <ClipToOutlines>true</ClipToOutlines>
-  <LastExportFolder>C:\Users\kolsen\Documents\git\OSTR\V2\design_files_2-1\pannel</LastExportFolder>
+  <LastExportFolder />
   <DoNotGenerateMouseBites>false</DoNotGenerateMouseBites>
 </GerberLayoutSet>
