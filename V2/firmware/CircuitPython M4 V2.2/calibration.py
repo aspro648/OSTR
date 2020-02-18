@@ -1,6 +1,6 @@
 # robot specific parameters
 wheel_dia = 51     # mm (increase = decrease distance)
-wheel_base = 71.75 # mm (increase = spiral in)
+wheel_base = 71.9 # mm (increase = spiral clockwise)
 
 # stepper parameters
 steps_rev = 512    # 512 for 64x gearbox, 128 for 16x gearbox

@@ -4,15 +4,16 @@
 # https://github.com/scruss/python-hershey
 
 from turtle import *
-import math
 try:
-    from hersey_font import cursive as glyphs
+    from lib.hersey_font import cursive as glyphs
 except ImportError:
     import sys
-    print('\nError: Need file "/lib/hersey_font.py"')
+    print('\nError: Need file "lib/hersey_font.py"')
     sys.exit()
 
 '''
+Place turtle in center of paper facing east.
+
 Hershey fonts were developed in the 1960s for rendering text on cathode ray tube displays.
 They use a rather cryptic method of encoding coordinate pairs using ascii characters.
 Since the turtle output is vector (direction and distance), Hershey font codes can be
@@ -52,7 +53,7 @@ def hersheyparse(dat):
             line.append((char2val(s[i]), char2val(s[i+1])))
             i = i + 2
 
-        #print('line = %s' % line)
+        # print('line = %s' % line)
         lines.append(line)
     glyph = {  # character code in columns 1-6; it's not ASCII
                # indicative number of vertices in columns 6-9
@@ -66,13 +67,14 @@ def hersheyparse(dat):
         }
     return glyph
 
-#speed(1)
+# speed(1)
 x_scale = 3
 y_scale = -x_scale  # remember: Y is +ve *down* for Hershey ...
-x = 0
+x = -100   # start turtle in middle, move to edge
 y = 0
 penup()
 pensize(3)
+backward(75)
 
 for c in list(letters):
     vals = glyphs.get(c)
@@ -86,12 +88,12 @@ for c in list(letters):
             for pt in line:
                 if first == 1:
                     first = 0
-                    goto(x_origin + x_scale * (pt[0] - glyph['left'
-                                ]), y_origin + y_scale * pt[1])
+                    goto(x_origin + x_scale * (pt[0] - glyph['left']),
+                         y_origin + y_scale * pt[1])
                     pendown()
                 else:
-                    goto(x_origin + x_scale * (pt[0] - glyph['left'
-                                ]), y_origin + y_scale * pt[1])
+                    goto(x_origin + x_scale * (pt[0] - glyph['left']),
+                         y_origin + y_scale * pt[1])
             penup()
 
             # don't forget to move to (right sidebearing, 0) at end of draw
@@ -100,4 +102,5 @@ for c in list(letters):
     else:
         print("No glyph found for '%s'." % c)
 penup()
+forward(100)
 done()

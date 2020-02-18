@@ -48,7 +48,9 @@ def play_tone(freq, msec):
     '''
     #time.sleep(0.05)            # Delay 50 ms between notes
 
-tune = RTTTL(songs.find('MahnaMahna'))
+tune = RTTTL(songs.find('Entertainer'))
+
+time.sleep(2) # separate from startup beeps
 
 for freq, msec in tune.notes():
     play_tone(freq, msec)

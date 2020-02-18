@@ -4,6 +4,8 @@ from turtle import *
 Learn how to make a snowflake at
 https://groklearning.com/hoc/activity/snowflake/
 
+Place turtle in center of paper facing east.
+
 This code will run on the Turtle Robot or on a laptop.
 Pensize() & color() are not implemented in robot, but will
 not cause an error.

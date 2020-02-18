@@ -4,12 +4,18 @@
 import time
 import board
 import digitalio
+from RGBled import RGBled
 
 print('"Running blink.py"')
 
+'''
 # ItsyBitsy Express has a built in RGB LED
 import adafruit_dotstar
-RGBled = adafruit_dotstar.DotStar(board.APA102_SCK, board.APA102_MOSI, 1)
+try:
+    RGBled = adafruit_dotstar.DotStar(board.APA102_SCK, board.APA102_MOSI, 1)
+except ValueError:
+    print("Already implement APA102_MOSI")
+'''
 
 # And a red LED hooked to pin D13
 red_led = digitalio.DigitalInOut(board.D13)
@@ -17,7 +23,7 @@ red_led.direction = digitalio.Direction.OUTPUT
 red_led.value = True
 
 # How would you control the brightness of an LED?
-RGBled.brightness = 0.3
+RGBled.led.brightness = 0.3
 # Try shaking it back and forth to see.
 
 # Colors are repesented by the three values (0 - 255) for (red, green, blue)

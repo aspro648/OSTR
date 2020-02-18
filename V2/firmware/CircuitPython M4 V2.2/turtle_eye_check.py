@@ -2,6 +2,7 @@ import board
 import digitalio
 from time import sleep
 from analogio import AnalogIn
+from turtle import *
 
 # The LED will indicate when an object is close enough to reflect IR back to the detector.
 # With board attached to computer, lanuch plotter in Mu to see graphical response rates.

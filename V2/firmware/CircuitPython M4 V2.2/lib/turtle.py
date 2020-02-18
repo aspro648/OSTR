@@ -1,18 +1,15 @@
 # Pinouts for Turtle Robot board 2.1 and 2.2
 
-import math, time
+import math
+import time
 import board
 import digitalio
 import adafruit_motor.servo
 from analogio import AnalogIn
+import calibration
 import pulseio
+
 pwm = pulseio.PWMOut(board.A1, frequency=50)
-
-from calibration import *
-
-import gc
-gc.collect()
-
 DEBUG = False
 
 # Pin assignments
@@ -60,7 +57,8 @@ _heading = 0
 frac_error = 0
 spacer = ''
 
-servo = adafruit_motor.servo.Servo(pwm, min_pulse = min_pulse, max_pulse = max_pulse)
+servo = adafruit_motor.servo.Servo(pwm, min_pulse=calibration.min_pulse,
+                                   max_pulse=calibration.max_pulse)
 
 
 def setDebug(val):
@@ -69,7 +67,7 @@ def setDebug(val):
 
 
 def step(distance):
-    steps = distance * steps_rev / (wheel_dia * math.pi)
+    steps = distance * calibration.steps_rev/(calibration.wheel_dia * math.pi)
     frac = steps-int(steps)
     if frac > 0.5:
         return int(steps + 1), 1 - frac
@@ -80,14 +78,15 @@ def step(distance):
 def forward(distance):
     global _x, _y, _heading
     steps, frac = step(distance)
-    if DEBUG: print("%sforward(%s)" % (spacer, distance))
+    if DEBUG:
+        print("%sforward(%s)" % (spacer, distance))
 
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
                 L_stepper[bit].value = patterns[pattern][bit]
                 R_stepper[bit].value = patterns[::-1][pattern][bit]
-            time.sleep(delay_time/1000)
+            time.sleep(calibration.delay_time/1000)
 
     # new point
     deltax = distance * math.cos(math.radians(_heading))
@@ -99,14 +98,15 @@ def forward(distance):
 def backward(distance):
     global _x, _y, _heading
     steps, frac = step(distance)
-    if DEBUG: print("%sbackward(%s)" % (spacer, distance))
+    if DEBUG:
+        print("%sbackward(%s)" % (spacer, distance))
 
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
                 R_stepper[bit].value = patterns[pattern][bit]
                 L_stepper[bit].value = patterns[::-1][pattern][bit]
-            time.sleep(delay_time/1000)
+            time.sleep(calibration.delay_time/1000)
 
     # new point
     deltax = distance * math.cos(math.radians(_heading - 180))
@@ -117,9 +117,10 @@ def backward(distance):
 
 def left(degrees):
     global _x, _y, _heading, frac_error
-    if DEBUG: print("%sleft(%s)" % (spacer, degrees))
+    if DEBUG:
+        print("%sleft(%s)" % (spacer, degrees))
     rotation = degrees / 360.0
-    distance = wheel_base * math.pi * rotation
+    distance = calibration.wheel_base * math.pi * rotation
     steps, frac = step(distance)
     frac_error += frac
     for x in range(steps):
@@ -127,70 +128,77 @@ def left(degrees):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
                 R_stepper[bit].value = patterns[pattern][bit]
                 L_stepper[bit].value = patterns[pattern][bit]
-            time.sleep(delay_time/1000)
+            time.sleep(calibration.delay_time/1000)
     _heading = _heading + degrees
     while _heading > 360:
         _heading = _heading - 360
-    if False: print("steps=%s, frac_error=%s" % (steps, frac_error))
+    if False:
+        print("steps=%s, frac_error=%s" % (steps, frac_error))
 
 
 def right(degrees):
     global _x, _y, _heading
-    if DEBUG: print("%sright(%s)" % (spacer, degrees))
+    if DEBUG:
+        print("%sright(%s)" % (spacer, degrees))
     rotation = degrees / 360.0
-    distance = wheel_base * math.pi * rotation
+    distance = calibration.wheel_base * math.pi * rotation
     steps, frac = step(distance)
     for x in range(steps):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
                 R_stepper[bit].value = patterns[::-1][pattern][bit]
                 L_stepper[bit].value = patterns[::-1][pattern][bit]
-            time.sleep(delay_time/1000)
+            time.sleep(calibration.delay_time/1000)
     _heading = _heading - degrees
     while _heading < 0:
         _heading = _heading + 360
 
 
 def penup():
-    servo.angle = PEN_UP
-    if DEBUG: print("penup()")
+    servo.angle = calibration.PEN_UP
+    if DEBUG:
+        print("penup()")
 
 def pendown():
-    servo.angle = PEN_DOWN
-    if DEBUG: print("pendown()")
+    servo.angle = calibration.PEN_DOWN
+    if DEBUG:
+        print("pendown()")
 
 def done():
     for value in range(4):
         L_stepper[value].value = False
         R_stepper[value].value = False
-    if DEBUG: print("done()")
-		
+    penup()
+    time.sleep(1)
+    if DEBUG:
+        print("done()")
+
 def goto(x, y):
     global spacer
-    spacer = '    ' # offsets debug statements after "goto(x, y)"
+    spacer = '    '  # offsets debug statements after "goto(x, y)"
     center_x, center_y = position()
     bearing = getBearing(x, y, center_x, center_y)
     trnRight = heading() - bearing
-    if DEBUG: print("goto(%s, %s)" % (x, y))
+    if DEBUG:
+        print("goto(%s, %s)" % (x, y))
     if abs(trnRight) > 180:
         if trnRight >= 0:
             left(360 - trnRight)
-            #if DEBUG: print('left(%s)' % (360 - trnRight))
+            # if DEBUG: print('left(%s)' % (360 - trnRight))
         else:
             right(360 + trnRight)
-            #if DEBUG: print('right(%s)' % (360 + trnRight))
+            # if DEBUG: print('right(%s)' % (360 + trnRight))
     else:
         if trnRight >= 0:
             right(trnRight)
-            #if DEBUG: print('right(%s)' % trnRight)
+            # if DEBUG: print('right(%s)' % trnRight)
         else:
             left(-trnRight)
-            #if DEBUG: print('left(%s)' % -trnRight)
+            # if DEBUG: print('left(%s)' % -trnRight)
     dist = distance(tuple(position()), (x, y))
     forward(dist)
     spacer = ''
-    #if DEBUG: print('forward(%s)' % dist)
-	
+
 
 def pensize(size):
     print('pensize() is not implemented in Turtle Robot')
@@ -216,19 +224,17 @@ def heading():
 
 
 def distance(pointA, pointB):
-    return abs((pointB[0] - pointA[0])**2  + (pointB[1] - pointA[1])**2)**0.5
+    return abs((pointB[0] - pointA[0])**2 + (pointB[1] - pointA[1])**2)**0.5
 
 
 def getBearing(x, y, center_x, center_y):
     # https://stackoverflow.com/questions/5058617/bearing-between-two-points
     angle = math.degrees(math.atan2(y - center_y, x - center_x))
     bearing = (angle + 360) % 360
-    #bearing2 = (90 - angle) % 360
-    #print "gb: x=%2d y=%2d angle=%6.1f bearing=%5.1f bearing2=%5.1f" % (x, y, angle, bearing1, bearing2)
     return bearing
 
 
-def circle(radius, extent = None, steps = None):
+def circle(radius, extent=None, steps=None):
     """ Draw a circle with given radius.
 
     Arguments:
@@ -263,24 +269,25 @@ def circle(radius, extent = None, steps = None):
         extent = 360
     if steps is None:
         frac = abs(extent)/360
-        #print("frac = %s" % frac)
+        # print("frac = %s" % frac)
         steps = 1+int(min(11+abs(radius)/6.0, 59.0)*frac)
     w = 1.0 * extent / steps
     w2 = 0.5 * w
-    l = 2.0 * radius * math.sin(w2*math.pi/180.0)
+    length = 2.0 * radius * math.sin(w2*math.pi/180.0)
     if radius < 0:
-        l, w, w2 = -l, -w, -w2
-    if DEBUG: print("circle(%s, extent=%s, steps=%s)" % (radius, extent, steps))
+        length, w, w2 = -length, -w, -w2
+    if DEBUG:
+        print("circle(%s, extent=%s, steps=%s)" % (radius, extent, steps))
     if False:
-        print("l (step length) = %s" % l)
+        print("length (step length) = %s" % length)
         print("w (turn angle)= %s" % w)		
         print("w2 (inital rotation) = %s" % w2)
 
         print("steps = %s" % steps)	
         print("extent = %s" % extent)
-        #print("self._degreesPerAU = %s" % self._degreesPerAU)
+        # print("self._degreesPerAU = %s" % self._degreesPerAU)
     left(w2)
     for i in range(steps):
-        forward(l)
+        forward(length)
         left(w)
     left(-w2)

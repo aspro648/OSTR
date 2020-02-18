@@ -38,7 +38,6 @@ RGBled(ChickTECH_pink)
 # --- The following scripts are Turtle Robot specific ---
 import turtle_wheel_calibration
 #import turtle_eye_check
-#import blink
 #import rtttl_example
 #import music_example
 #import turtle_obstacles
