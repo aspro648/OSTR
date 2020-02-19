@@ -6,6 +6,9 @@
 from turtle import *
 try:
     from lib.hersey_font import cursive as glyphs
+    x_scale = 3
+    #from lib.hersey_font import simple as glyphs
+    #x_scale = 2.5
 except ImportError:
     import sys
     print('\nError: Need file "lib/hersey_font.py"')
@@ -32,6 +35,55 @@ print('Example of using vector fonts from turtle_cursive_example.py')
 
 
 letters = "Hello"
+
+def setHeading2(to_angle):
+    '''
+    Set the orientation of the turtle to to_angle.
+    
+    Aliases:  setheading | seth
+    
+    Argument:
+    to_angle -- a number (integer or float)
+    
+    Set the orientation of the turtle to to_angle.
+    Here are some common directions in degrees:
+    
+     standard - mode:          logo-mode:
+    -------------------|--------------------
+       0 - east                0 - north
+      90 - north              90 - east
+     180 - west              180 - south
+     270 - south             270 - west
+    
+    Example:
+    >>> setheading(90)
+    >>> heading()
+    90
+    '''
+    
+    cur_heading = heading()
+    print(to_angle - cur_heading)
+    if (to_angle - cur_heading) < 0:
+        if (to_angle - cur_heading) > -180:
+            left(to_angle - cur_heading)
+            print("1 left(%s)" % (to_angle - cur_heading))
+        else:
+            left(to_angle - cur_heading + 360)
+            print("2 left(%s)" % (to_angle - cur_heading + 360))            
+    else:
+        if (to_angle - cur_heading) > 180:
+            left(360 - to_angle - cur_heading - 180)
+            print("3 left(%s)" % (360 - to_angle - cur_heading))
+        else:
+            left(to_angle - cur_heading)
+            print("4 left(%s)" % (to_angle - cur_heading))
+
+
+setheading(270)
+setHeading2(190)
+print(heading())
+exit()
+
 
 
 def char2val(c):  # data is stored as signed bytes relative to ASCII R
@@ -68,7 +120,6 @@ def hersheyparse(dat):
     return glyph
 
 # speed(1)
-x_scale = 3
 y_scale = -x_scale  # remember: Y is +ve *down* for Hershey ...
 x = -100   # start turtle in middle, move to edge
 y = 0
@@ -102,5 +153,6 @@ for c in list(letters):
     else:
         print("No glyph found for '%s'." % c)
 penup()
+setHeadingTo(270)
 forward(100)
 done()

@@ -34,6 +34,11 @@ while True:
         leftLED.value = False
     else:
         leftLED.value = True
-    isButtonPushed = not button.value #pulled up (True) when not pushed
-    print('(%.2f, %.2f, %d)' % (leftVal, rightVal, isButtonPushed))  # Formats output to two decimal places
+
+    if (isButtonPushed()):
+        pendown()
+    else:
+        penup()
+
+    print('(%.2f, %.2f, %d)' % (leftVal, rightVal, isButtonPushed()))  # Formats output to two decimal places
     sleep(0.1)  # Don't go too fast if we're trying to read the output!

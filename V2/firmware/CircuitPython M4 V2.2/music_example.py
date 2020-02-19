@@ -1,26 +1,31 @@
 import board
-
+import time
 import simpleio
+from tone import tone
+
+'''
+Can you adapt your favorite tune to code?
+Add notes / frequencies from https://pages.mtu.edu/~suits/notefreqs.html
+
+If you don't want to hear startup beeps, modify lib/tone.py
+'''
 
 
-# Define pin connected to piezo buzzer.
-PIEZO_PIN = board.A0
+# note / frequency
+C4 = 262
+D4 = 294
+E4 = 330
+F4 = 349
+G4 = 392
+A4 = 440
+B4 = 494
 
-# Define a list of tones/music notes to play.
-TONE_FREQ = [ 262,  # C4
-              294,  # D4
-              330,  # E4
-              349,  # F4
-              392,  # G4
-              440,  # A4
-              494 ] # B4
+# This is a list of tuples, i.e. (note, duration)
+tune = [(C4, 0.25), (D4, 0.25), (E4, 0.25), (F4, 0.25), (G4, 0.25),
+        (A4, 0.25), (B4, 0.25)]
 
+time.sleep(2) # wait for startup beeps to end
 
-# Main loop will go through each tone in order up and down.
-for x in range(1):
-    # Play tones going from start to end of list.
-    for i in range(len(TONE_FREQ)):
-        simpleio.tone(PIEZO_PIN, TONE_FREQ[i], duration=0.25)
-    # Then play tones going from end to start of list.
-    for i in range(len(TONE_FREQ)-1, -1, -1):
-        simpleio.tone(PIEZO_PIN, TONE_FREQ[i], duration=0.25)
+for note in tune:
+    frequency, duration = note # unpack the tuple
+    tone(frequency, duration)

@@ -11,9 +11,9 @@ def tone(frequency, duration):
     simpleio.tone(PIEZO_PIN, frequency, duration=duration)
 
 
-# play 3 random notes on startup
+# play random notes on startup
 for x in range(5):
     frequency = random.random()*800+100
-    duration = random.random()/8
+    duration = random.random()/16
     tone(frequency, duration)
     if False: print("tone(%s, %s)" % (frequency, duration))

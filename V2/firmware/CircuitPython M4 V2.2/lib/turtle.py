@@ -159,10 +159,12 @@ def penup():
     if DEBUG:
         print("penup()")
 
+
 def pendown():
     servo.angle = calibration.PEN_DOWN
     if DEBUG:
         print("pendown()")
+
 
 def done():
     for value in range(4):
@@ -172,6 +174,7 @@ def done():
     time.sleep(1)
     if DEBUG:
         print("done()")
+
 
 def goto(x, y):
     global spacer
@@ -198,6 +201,49 @@ def goto(x, y):
     dist = distance(tuple(position()), (x, y))
     forward(dist)
     spacer = ''
+
+
+def setheading(to_angle):
+    '''
+    Set the orientation of the turtle to to_angle.
+    
+    Aliases:  setheading | seth
+    
+    Argument:
+    to_angle -- a number (integer or float)
+    
+    Set the orientation of the turtle to to_angle.
+    Here are some common directions in degrees:
+    
+     standard - mode:          logo-mode:
+    -------------------|--------------------
+       0 - east                0 - north
+      90 - north              90 - east
+     180 - west              180 - south
+     270 - south             270 - west
+    
+    Example:
+    >>> setheading(90)
+    >>> heading()
+    90
+    '''
+    
+    cur_heading = heading()
+    print(to_angle - cur_heading)
+    if (to_angle - cur_heading) < 0:
+        if (to_angle - cur_heading) > -180:
+            left(to_angle - cur_heading)
+            if DEBUG: print("1 left(%s)" % (to_angle - cur_heading))
+        else:
+            left(to_angle - cur_heading + 360)
+            if DEBUG: print("2 left(%s)" % (to_angle - cur_heading + 360))            
+    else:
+        if (to_angle - cur_heading) > 180:
+            left(360 - to_angle - cur_heading - 180)
+            if DEBUG: print("3 left(%s)" % (360 - to_angle - cur_heading))
+        else:
+            left(to_angle - cur_heading)
+            if DEBUG: print("4 left(%s)" % (to_angle - cur_heading))
 
 
 def pensize(size):
@@ -291,3 +337,7 @@ def circle(radius, extent=None, steps=None):
         forward(length)
         left(w)
     left(-w2)
+
+
+def isButtonPushed():
+    return not button.value #pulled up (True) when not pushed

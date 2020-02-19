@@ -48,6 +48,13 @@ def play_tone(freq, msec):
     '''
     #time.sleep(0.05)            # Delay 50 ms between notes
 
+# Code for these tunes are contained in lib/songs.py
+song_names = ['Super Mario - Main Theme', 'Super Mario - Title Music', 'SMBtheme', 'SMBwater',
+              'SMBunderground', 'Picaxe', 'The Simpsons', 'Indiana', 'TakeOnMe', 'Entertainer',
+              'Muppets', 'Xfiles', 'Looney', '20thCenFox', 'Bond', 'MASH', 'StarWars', 'GoodBad',
+              'TopGun', 'A-Team', 'Flinstones', 'Jeopardy', 'Gadget', 'Smurfs', 'MahnaMahna',
+              'LeisureSuit', 'MissionImp', 'RickAstley']
+
 tune = RTTTL(songs.find('Entertainer'))
 
 time.sleep(2) # separate from startup beeps

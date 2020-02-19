@@ -1,17 +1,19 @@
 from turtle import *
+import random
 
 '''
 Learn how to make a snowflake at
 https://groklearning.com/hoc/activity/snowflake/
 
-Place turtle in center of paper facing east.
-
 This code will run on the Turtle Robot or on a laptop.
 Pensize() & color() are not implemented in robot, but will
 not cause an error.
+
+Can you use the random.randrange(low, high) to create
+a variable number of arms or lengths?
 '''
 
-print('Running "turtle_snowflake_example.py"')
+print('Running "turtle_snowflake_example1.py"')
 pensize(5)          # pensize & color are not implemented in robot
 pencolor('skyblue')
 
