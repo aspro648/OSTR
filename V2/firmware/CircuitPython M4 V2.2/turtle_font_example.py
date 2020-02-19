@@ -34,6 +34,8 @@ L()
 O()
 
 penup()
+setheading(90) # North
+forward(100)
 done()
 
 

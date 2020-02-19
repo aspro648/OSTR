@@ -23,18 +23,6 @@ while True:
     rightVal = rightDetector.value / 65535  # The analog value is 12-bits, thus 0 - 65535
     leftVal = leftDetector.value / 65535    # We convert it to a ratio to make it easier to read.
 
-    #Some code to test servo position using button
-    if button.value:
-        if penState == DOWN:
-            penup()
-            penState = UP
-            print("penup()")
-    else:
-        if penState == UP:
-            pendown()
-            penState = DOWN
-            print("pendown()")
-
     # Check IR values and turn on LED if obstacle detected
     if rightVal < threshold or leftVal < threshold:
         if rightVal < threshold:
@@ -48,3 +36,15 @@ while True:
         forward(1)
         rightLED.value = False  # Turn LED off
         leftLED.value = False
+
+    if (isButtonPushed()):
+        while(isButtonPushed()):
+            time.sleep(0.1)
+        penState = not(penState)
+        if penState:
+            penup()
+        else:
+            pendown()
+
+    #print('(%.2f, %.2f, %d)' % (leftVal, rightVal, penState))  # Formats output to two decimal places
+    #time.sleep(0.1)

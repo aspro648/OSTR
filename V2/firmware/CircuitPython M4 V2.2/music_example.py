@@ -1,6 +1,4 @@
-import board
 import time
-import simpleio
 from tone import tone
 
 '''
@@ -21,11 +19,17 @@ A4 = 440
 B4 = 494
 
 # This is a list of tuples, i.e. (note, duration)
-tune = [(C4, 0.25), (D4, 0.25), (E4, 0.25), (F4, 0.25), (G4, 0.25),
-        (A4, 0.25), (B4, 0.25)]
+tune = [(C4, 0.5), (D4, 0.4), (E4, 0.3), (F4, 0.2), (G4, 0.1),
+        (A4, 0.075), (B4, 0.05)]
 
-time.sleep(2) # wait for startup beeps to end
+time.sleep(2)  # wait for startup beeps to end
 
 for note in tune:
-    frequency, duration = note # unpack the tuple
+    frequency, duration = note  # unpack the tuple
+    print("tone(%s, %s)" % (frequency, duration))
+    tone(frequency, duration)
+
+for note in tune[::-1]:  # list[::-1] reverses the order
+    frequency, duration = note  # unpack the tuple
+    print("tone(%s, %s)" % (frequency, duration))
     tone(frequency, duration)

@@ -41,4 +41,8 @@ for arm in range(number_of_arms):
   backward(length * 1.5)
   left(360 / number_of_arms)
 
+penup()
+setheading(90) # North
+forward(100)
+
 done()  # this releases the motors to save power

@@ -117,41 +117,47 @@ def backward(distance):
 
 def left(degrees):
     global _x, _y, _heading, frac_error
-    if DEBUG:
-        print("%sleft(%s)" % (spacer, degrees))
-    rotation = degrees / 360.0
-    distance = calibration.wheel_base * math.pi * rotation
-    steps, frac = step(distance)
-    frac_error += frac
-    for x in range(steps):
-        for pattern in range(len(patterns)):
-            for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
-                R_stepper[bit].value = patterns[pattern][bit]
-                L_stepper[bit].value = patterns[pattern][bit]
-            time.sleep(calibration.delay_time/1000)
-    _heading = _heading + degrees
-    while _heading > 360:
-        _heading = _heading - 360
-    if False:
-        print("steps=%s, frac_error=%s" % (steps, frac_error))
+    if (degrees < 0):
+        right(-degrees)
+    else:
+        if DEBUG:
+            print("%sleft(%s)" % (spacer, degrees))
+        rotation = degrees / 360.0
+        distance = calibration.wheel_base * math.pi * rotation
+        steps, frac = step(distance)
+        frac_error += frac
+        for x in range(steps):
+            for pattern in range(len(patterns)):
+                for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
+                    R_stepper[bit].value = patterns[pattern][bit]
+                    L_stepper[bit].value = patterns[pattern][bit]
+                time.sleep(calibration.delay_time/1000)
+        _heading = _heading + degrees
+        while _heading > 360:
+            _heading = _heading - 360
+        if False:
+            print("steps=%s, frac_error=%s" % (steps, frac_error))
 
 
 def right(degrees):
     global _x, _y, _heading
-    if DEBUG:
-        print("%sright(%s)" % (spacer, degrees))
-    rotation = degrees / 360.0
-    distance = calibration.wheel_base * math.pi * rotation
-    steps, frac = step(distance)
-    for x in range(steps):
-        for pattern in range(len(patterns)):
-            for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
-                R_stepper[bit].value = patterns[::-1][pattern][bit]
-                L_stepper[bit].value = patterns[::-1][pattern][bit]
-            time.sleep(calibration.delay_time/1000)
-    _heading = _heading - degrees
-    while _heading < 0:
-        _heading = _heading + 360
+    if (degrees < 0):
+        left(-degrees)
+    else:
+        if DEBUG:
+            print("%sright(%s)" % (spacer, degrees))
+        rotation = degrees / 360.0
+        distance = calibration.wheel_base * math.pi * rotation
+        steps, frac = step(distance)
+        for x in range(steps):
+            for pattern in range(len(patterns)):
+                for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
+                    R_stepper[bit].value = patterns[::-1][pattern][bit]
+                    L_stepper[bit].value = patterns[::-1][pattern][bit]
+                time.sleep(calibration.delay_time/1000)
+        _heading = _heading - degrees
+        while _heading < 0:
+            _heading = _heading + 360
 
 
 def penup():
@@ -159,12 +165,10 @@ def penup():
     if DEBUG:
         print("penup()")
 
-
 def pendown():
     servo.angle = calibration.PEN_DOWN
     if DEBUG:
         print("pendown()")
-
 
 def done():
     for value in range(4):
@@ -174,7 +178,6 @@ def done():
     time.sleep(1)
     if DEBUG:
         print("done()")
-
 
 def goto(x, y):
     global spacer
@@ -206,44 +209,43 @@ def goto(x, y):
 def setheading(to_angle):
     '''
     Set the orientation of the turtle to to_angle.
-    
+
     Aliases:  setheading | seth
-    
+
     Argument:
     to_angle -- a number (integer or float)
-    
+
     Set the orientation of the turtle to to_angle.
     Here are some common directions in degrees:
-    
+
      standard - mode:          logo-mode:
     -------------------|--------------------
        0 - east                0 - north
       90 - north              90 - east
      180 - west              180 - south
      270 - south             270 - west
-    
+
     Example:
     >>> setheading(90)
     >>> heading()
     90
     '''
-    
+
     cur_heading = heading()
-    print(to_angle - cur_heading)
     if (to_angle - cur_heading) < 0:
         if (to_angle - cur_heading) > -180:
             left(to_angle - cur_heading)
-            if DEBUG: print("1 left(%s)" % (to_angle - cur_heading))
+            if DEBUG: print("Case 1 left(%s)" % (to_angle - cur_heading))
         else:
             left(to_angle - cur_heading + 360)
-            if DEBUG: print("2 left(%s)" % (to_angle - cur_heading + 360))            
+            if DEBUG: print("Case 2 left(%s)" % (to_angle - cur_heading + 360))
     else:
         if (to_angle - cur_heading) > 180:
             left(360 - to_angle - cur_heading - 180)
-            if DEBUG: print("3 left(%s)" % (360 - to_angle - cur_heading))
+            if DEBUG: print("Case 3 left(%s)" % (360 - to_angle - cur_heading))
         else:
             left(to_angle - cur_heading)
-            if DEBUG: print("4 left(%s)" % (to_angle - cur_heading))
+            if DEBUG: print("Case 4 left(%s)" % (to_angle - cur_heading))
 
 
 def pensize(size):

@@ -12,10 +12,14 @@ print('Click on the [Plotter] button to see a graph of the output.')
 print('Turtle robot shield must be attached.')
 print('What happens when you hold your hand in front of the clear LED?')
 
+UP = True     # some alias to help track pen position
+DOWN = False
+penState = UP
+
 # Turn IR LEDs on.  You might be able to see them in a camera.
 emitter.value = True
 
-for x in range(3):
+for x in range(3):  # blink front LEDs 3 times
     rightLED.value = True
     leftLED.value = True
     sleep(0.25)
@@ -36,9 +40,13 @@ while True:
         leftLED.value = True
 
     if (isButtonPushed()):
-        pendown()
-    else:
-        penup()
+        while(isButtonPushed()):
+            time.sleep(0.1)
+        penState = not(penState)
+        if penState:
+            penup()
+        else:
+            pendown()
 
     print('(%.2f, %.2f, %d)' % (leftVal, rightVal, isButtonPushed()))  # Formats output to two decimal places
     sleep(0.1)  # Don't go too fast if we're trying to read the output!

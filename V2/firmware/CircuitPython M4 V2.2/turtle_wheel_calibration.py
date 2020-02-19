@@ -15,6 +15,7 @@ print('    wheel_base = %s mm (increase = spiral in) ' % calibration.wheel_base)
 print('    PEN_UP angle = %s' % calibration.PEN_UP)
 print('    PEN_DOWN angle = %s' % calibration.PEN_DOWN)
 
+
 # Test the servo
 for x in range(2):
     penup()
