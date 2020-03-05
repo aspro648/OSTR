@@ -1,4 +1,5 @@
 # Pinouts for Turtle Robot board 2.1 and 2.2
+# Ver 20200304
 
 import math
 import time
@@ -260,6 +261,10 @@ def pencolor(color):
 
 def speed(x):
     print('speed() is not implemented in Turtle Robot')
+    pass
+
+def shape(x):
+    print('shape() is not implemented in Turtle Robot')
     pass
 
 
