@@ -7,7 +7,6 @@ Turtle Board Kit:
 - 1 ea. Microcontroller, either:
   - Adafruit ItsyBitsy M4 (CircuitPython), https://www.digikey.com/short/p01z13 (recommended)
   - Adafruit ItsyBitsy 32U4 3V (Arduino), https://www.digikey.com/short/jw9mwm
-  - Adafruit ItsyBitsy M0 (CircuitPython), https://www.digikey.com/short/j0vqzd 
 - 1 ea. ULN2803 Darlington Driver, [STM ULN2803A](https://www.digikey.com/short/q728f3)
 - 1 ea. CONN IC DIP SOCKET 18POS TIN [On Shore ED18DT](https://www.digikey.com/short/jd3rvh) (optional)
 - 2 ea. JST B5B-XH-A Receptical, [JST B5B-XH-A](https://www.digikey.com/short/qcrr5m)
@@ -24,14 +23,7 @@ Turtle Board Kit:
 - 4 ea. 330 ohm resistor 1/8W, [Stackpole CF18JT330R](https://www.digikey.com/short/jzr35t)
 - 2 ea. 10K resistor 1/8W, 
 - 2 ea. 3mm LEDs, [Wurth 151031VS06000](http://www.digikey.com/short/3335hz)
-
-
-Microcontroller:
-
-- 1 ea. Microcontroller, either:
-  - Adafruit ItsyBitsy 32U4 3V (Arduino), https://www.digikey.com/short/jw9mwm
-  - Adafruit ItsyBitsy M0 (CircuitPython), https://www.digikey.com/short/j0vqzd 
-- 1 ea. USB 2.0 A Male to Micro B cable, http://a.co/bYaNDg6
+- 1 ea. Piezo speaker, [TDK PS1240P02CT3](https://www.digikey.com/short/zndnmn)
 
   
 Electromechanical:
@@ -64,4 +56,4 @@ Misc:
 - Stickers
 - Screwdriver
 - 4 ea. AA batteries, [Panasonic LR6XWA/B](https://www.digikey.com/short/qcwdbb)   
-   
+- 1 ea. USB 2.0 A Male to Micro B cable, http://a.co/bYaNDg6
