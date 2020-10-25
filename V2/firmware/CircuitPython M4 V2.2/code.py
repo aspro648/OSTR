@@ -37,7 +37,7 @@ print("Hello!  Edit 'code.py' to change the robots behavor.\n")
 # Open the individual ".py" file to see what it does or modify it.
 
 # --- The following scripts are Turtle Robot specific ---
-import turtle_wheel_calibration
+import wheel_calibration
 #import eye_check
 #import example
 #import music_example
