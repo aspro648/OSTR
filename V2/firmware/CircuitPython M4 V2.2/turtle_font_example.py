@@ -18,14 +18,14 @@ not cause an error.
 
 print('Example of using vector fonts from turtle_font.py')
 
-
+penup()
 backward(75)
 left(90)
 backward(25)
 right(90)
 
 pendown()
-setScale(13)
+setScale(10)
 
 H()
 E()
