@@ -8,7 +8,7 @@ delay_time = 3     # time between steps in ms (too quick will freeze motors)
 invert_direction = True  # change if turtle running backward
 
 # servo parameters
-PEN_DOWN = 170     # angle of servo when pen is down
-PEN_UP = 85        # angle of servo when pen is up
+PEN_DOWN = 160     # angle of servo when pen is down
+PEN_UP = 75        # angle of servo when pen is up
 min_pulse = 750
 max_pulse = 2500
