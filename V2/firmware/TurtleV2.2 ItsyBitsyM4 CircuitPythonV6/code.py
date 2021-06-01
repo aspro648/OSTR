@@ -23,13 +23,14 @@ Activites:
 
 Turtle Name:  Turtle
 Turtle Owner: Your Name
+Serial Number: 015
 '''
 
 from turtle import *
 from tone import tone         # tone(frequency, duration)
 from RGBled import RGBled     # RGBled((red, blue, green))
-ChickTECH_pink = (94, 40, 62) #https://www.rapidtables.com/web/color/RGB_Color.html
-RGBled(ChickTECH_pink)
+myColor = (0, 0, 153)       #https://www.rapidtables.com/web/color/RGB_Color.html
+RGBled(myColor, brightness=0.15)
 
 print("Hello!  Edit 'code.py' to change the robots behavor.\n")
 
