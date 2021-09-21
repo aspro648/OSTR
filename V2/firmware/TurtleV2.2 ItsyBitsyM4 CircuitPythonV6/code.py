@@ -41,7 +41,7 @@ print("Hello!  Edit 'code.py' to change the robots behavor.\n")
 
 # --- The following scripts are Turtle Robot specific ---
 #import wheel_calibration
-#import eye_check
+import eye_check
 #import example
 #import music_example
 #import turtle_obstacles
@@ -51,5 +51,5 @@ print("Hello!  Edit 'code.py' to change the robots behavor.\n")
 #import turtle_snowflake_example2
 #import turtle_mySnowflake
 #import turtle_font_example
-import turtle_cursive_example
+#import turtle_cursive_example
 #import turtle_goto_example

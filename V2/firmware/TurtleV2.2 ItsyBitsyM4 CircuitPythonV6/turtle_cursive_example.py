@@ -34,7 +34,7 @@ print('Example of using vector fonts from turtle_cursive_example.py')
 # Save them in glyph dictionary in '/lib/hersey_font.py'.
 
 
-letters = "Hello"
+letters = "Gerald"
 
 
 def char2val(c):  # data is stored as signed bytes relative to ASCII R
