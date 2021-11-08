@@ -52,7 +52,7 @@ Having told you the at-cost and provided you my BOM, I'd still offer to [sell yo
 
 Design Files
 ------------
-The electronics were designed using Open Source [KiCad](http://kicad-pcb.org/). Design files are located in the [design_files](V2/design_files/) folder.  You can oogle the [schematic](V2/docs/Schematic.pdf).
+The electronics were designed using Open Source [KiCad](http://kicad.org/). Design files are located in the [design_files](V2/design_files/) folder.  You can oogle the [schematic](V2/docs/Schematic.pdf).
 
 The 3D Design files were created with a combination of [FreeCad](https://www.freecadweb.org/), [OpenSCAD](https://www.openscad.org/) (both Open Source), and online [TinkerCad](https://www.tinkercad.com/).  Design files and STLs are located in the [3D](V2/3D/) folder.
 
