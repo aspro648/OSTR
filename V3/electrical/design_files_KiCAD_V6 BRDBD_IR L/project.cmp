@@ -1,0 +1,122 @@
+Cmp-Mod V01 Created by Cvpcb (2015-04-22 BZR 5621)-product   date = 4/29/2015 5:37:35 PM
+
+BeginCmp
+TimeStamp = /553F9619;
+Reference = BT1;
+ValeurCmp = Battery;
+IdModule  = myFootPrints:BATT_CR2032;
+EndCmp
+
+BeginCmp
+TimeStamp = /553FDF53;
+Reference = C1;
+ValeurCmp = 0.1 uF;
+IdModule  = myFootPrints:C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /553EFED0;
+Reference = C2;
+ValeurCmp = 10 uF;
+IdModule  = Capacitors_ThroughHole:C_Radial_D6.3_L11.2_P2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F04E8;
+Reference = D1;
+ValeurCmp = ZD3V6;
+IdModule  = Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F04BF;
+Reference = D2;
+ValeurCmp = ZD3V6;
+IdModule  = Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F0058;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /553EFF0C;
+Reference = D4;
+ValeurCmp = 1N4001;
+IdModule  = Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10;
+EndCmp
+
+BeginCmp
+TimeStamp = /553EFD0A;
+Reference = IC1;
+ValeurCmp = ATTINY85-P;
+IdModule  = Housings_DIP:DIP-8__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /553EFD45;
+Reference = J1;
+ValeurCmp = USB;
+IdModule  = Connect:USB_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F4A67;
+Reference = P1;
+ValeurCmp = CONN_01X10;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x10;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F0F1B;
+Reference = Q1;
+ValeurCmp = LIGHT;
+IdModule  = myFootPrints:PHOTO_TRANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F03CB;
+Reference = R1;
+ValeurCmp = 22;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F03AA;
+Reference = R2;
+ValeurCmp = 22;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F0382;
+Reference = R3;
+ValeurCmp = 1K5;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553EFF3F;
+Reference = R4;
+ValeurCmp = 330;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F9580;
+Reference = SW1;
+ValeurCmp = SPST;
+IdModule  = myFootPrints:SW_SPST;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F2A7C;
+Reference = TOUCH1;
+ValeurCmp = SW_PUSH;
+IdModule  = myFootPrints:SW_PUSH_TOUCH;
+EndCmp
+
+EndListe

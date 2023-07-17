@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "project")(type "Legacy")(uri "${KIPRJMOD}/lib_sch/project.lib")(options "")(descr ""))
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/lib_sch/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
+)

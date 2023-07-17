@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<module moduleId="28byj-48-driver_roboteach_es_1" fritzingVersion="0.9.6">
+  <version>1.1</version>
+  <author>ROBOteach</author>
+  <title>28BYJ-48 Driver Module</title>
+  <url>https://github.com/mgesteiro/steppers</url>
+  <label>Driver</label>
+  <date>Sat May 8 2021</date>
+  <tags>
+    <tag>28BYJ-48</tag>
+    <tag>Driver</tag>
+    <tag>Module</tag>
+  </tags>
+  <properties>
+    <property name="family">28BYJ-48</property>
+    <property name="variant">with JST connector</property>
+    <property name="Part number">ULN2003</property>
+    <property name="Connector">JST B5B-XH-A</property>
+    <property name="Form">♂ (male)</property>
+    <property name="Connector pins">5</property>
+    <property name="Pin Spacing">2.50mm</property>
+    <property name="Hole size">0.9mm</property>
+    <property name="Control pins">4</property>
+    <property name="Form">♂ (male)</property>
+    <property name="Pin Spacing">2.54mm</property>
+    <property name="Hole size">1mm</property>
+    <property name="Row">single</property>
+    <property name="package">THT</property>
+    <property name="Power pins">4</property>
+    <property name="Form">♂ (male)</property>
+    <property name="Pin Spacing">2.54mm</property>
+    <property name="Hole size">1mm</property>
+    <property name="Row">single</property>
+    <property name="package">THT</property>
+  </properties>
+  <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;"&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;ULN2003 Driver Module for the 28BYJ-48 Unipolar Stepper Motor&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;LED A - Blue wire - Bottom coil left&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;LED B - Pink wire - Top coil left&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;LED C - Yellow wire - Bottom coil right&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;LED D - Orange wire - Top coil right&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Common rail - red&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Connector pins:&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;blue - pink - yellow - orange - red&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Control pins - IN1 to IN4&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Power pins - GND &amp;amp; Vmotor (5-12V)&lt;/p&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;On/Off jumper (if removed, power to motor is cut).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <views>
+    <iconView>
+      <layers image="breadboard/28byj-48-driver_roboteach_es_1_breadboard.svg">
+        <layer layerId="icon"/>
+      </layers>
+    </iconView>
+    <breadboardView>
+      <layers image="breadboard/28byj-48-driver_roboteach_es_1_breadboard.svg">
+        <layer layerId="breadboard"/>
+      </layers>
+    </breadboardView>
+    <schematicView>
+      <layers image="schematic/28byj-48-driver_roboteach_es_1_schematic.svg">
+        <layer layerId="schematic"/>
+      </layers>
+    </schematicView>
+    <pcbView>
+      <layers image="pcb/28byj-48-driver_roboteach_es_1_pcb.svg">
+        <layer layerId="copper0"/>
+        <layer layerId="silkscreen"/>
+        <layer layerId="copper1"/>
+      </layers>
+    </pcbView>
+  </views>
+  <connectors>
+    <connector id="connector0" type="male" name="IN1">
+      <description>Control IN1</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector0terminal" svgId="connector0pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector0terminal" svgId="connector0pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector0pin"/>
+          <p layer="copper1" svgId="connector0pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector1" type="male" name="IN2">
+      <description>Control IN2</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector1terminal" svgId="connector1pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector1terminal" svgId="connector1pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector1pin"/>
+          <p layer="copper1" svgId="connector1pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector2" type="male" name="IN3">
+      <description>Control IN3</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector2terminal" svgId="connector2pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector2terminal" svgId="connector2pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector2pin"/>
+          <p layer="copper1" svgId="connector2pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector3" type="male" name="IN4">
+      <description>Control IN4</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector3terminal" svgId="connector3pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector3terminal" svgId="connector3pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector3pin"/>
+          <p layer="copper1" svgId="connector3pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector4" type="male" name="GND">
+      <description>Power GND</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector4terminal" svgId="connector4pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector4terminal" svgId="connector4pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector4pin"/>
+          <p layer="copper1" svgId="connector4pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector5" type="male" name="Vmotor">
+      <description>Power Vmotor</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector5terminal" svgId="connector5pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector5terminal" svgId="connector5pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector5pin"/>
+          <p layer="copper1" svgId="connector5pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector6" type="male" name="ON/OFF">
+      <description>Power On/Off</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector6terminal" svgId="connector6pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector6terminal" svgId="connector6pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector6pin"/>
+          <p layer="copper1" svgId="connector6pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector7" type="male" name="ON/OFF">
+      <description>Power On/Off</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector7terminal" svgId="connector7pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector7terminal" svgId="connector7pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector7pin"/>
+          <p layer="copper1" svgId="connector7pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector8" type="female" name="blue-pin">
+      <description>Blue pin</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector8terminal" svgId="connector8pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector8terminal" svgId="connector8pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector8pin"/>
+          <p layer="copper1" svgId="connector8pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector9" type="female" name="pink-pin">
+      <description>Pink pin</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector9terminal" svgId="connector9pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector9terminal" svgId="connector9pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector9pin"/>
+          <p layer="copper1" svgId="connector9pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector10" type="female" name="yellow-pin">
+      <description>Yellow pin</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector10terminal" svgId="connector10pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector10terminal" svgId="connector10pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector10pin"/>
+          <p layer="copper1" svgId="connector10pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector11" type="female" name="orange-pin">
+      <description>Orange pin</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector11terminal" svgId="connector11pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector11terminal" svgId="connector11pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector11pin"/>
+          <p layer="copper1" svgId="connector11pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector id="connector12" type="female" name="red-pin">
+      <description>Red pin</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" terminalId="connector12terminal" svgId="connector12pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector12terminal" svgId="connector12pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper0" svgId="connector12pin"/>
+          <p layer="copper1" svgId="connector12pin"/>
+        </pcbView>
+      </views>
+    </connector>
+  </connectors>
+</module>

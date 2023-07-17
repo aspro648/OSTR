@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="1.0.0rc.2023-06-02.CD-4157-0-6b14cfe9" icon="Mine.png">
+    <title>My Parts</title>
+    <instances>
+        <instance moduleIdRef="rpi_pico-tht_1" modelIndex="5784" path="C:/Users/648ke/Documents/Fritzing/parts/user/rpi_pico-tht_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="28BYJ-48_roboteach_es_1" modelIndex="7003" path="C:/Users/648ke/Documents/Fritzing/parts/user/28BYJ-48_roboteach_es_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="28byj-48-driver_roboteach_es_1" modelIndex="7008" path="C:/Users/648ke/Documents/Fritzing/parts/user/28byj-48-driver_roboteach_es_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_9817b698d2ed101251fb987357768add_1" modelIndex="32074" path="C:/Users/648ke/Documents/Fritzing/parts/user/adafruit_9817b698d2ed101251fb987357768add_1.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>
