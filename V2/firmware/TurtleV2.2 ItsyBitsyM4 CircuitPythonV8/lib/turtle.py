@@ -151,12 +151,13 @@ def right(degrees):
 
 def _rotate(degrees):
     global _x, _y, _heading, _angular_error
-    if settings.invert_direction:
-        degrees = - degrees
+    #if settings.invert_direction:
+    #    degrees = - degrees
+    print("rotate(%s)" % degrees)
     rotation = (degrees) / 360.0
     distance = settings.wheel_base * math.pi * rotation
     steps, frac = step(distance)
-    if DEBUG:
+    if False:
         print("    degrees = %s" % degrees)
         print("    rotation = %s" % rotation)
         print("    distance = %s" % distance)
@@ -172,15 +173,22 @@ def _rotate(degrees):
     for x in range(abs(steps)):
         for pattern in range(len(patterns)):
             for bit in range(len(patterns[pattern])):  # fwd_mask[num]:
-                if degrees > 0:
-                    R_stepper[bit].value = patterns[pattern][bit]
-                    L_stepper[bit].value = patterns[pattern][bit]
+                if degrees < 0:
+                    if settings.invert_direction:
+                        R_stepper[bit].value = patterns[pattern][bit]
+                        L_stepper[bit].value = patterns[pattern][bit]
+                    else:
+                        R_stepper[bit].value = patterns[::-1][pattern][bit]
+                        L_stepper[bit].value = patterns[::-1][pattern][bit]
                 else:
-                    R_stepper[bit].value = patterns[::-1][pattern][bit]
-                    L_stepper[bit].value = patterns[::-1][pattern][bit]
-
+                    if settings.invert_direction:
+                        R_stepper[bit].value = patterns[::-1][pattern][bit]
+                        L_stepper[bit].value = patterns[::-1][pattern][bit]
+                    else:
+                        R_stepper[bit].value = patterns[pattern][bit]
+                        L_stepper[bit].value = patterns[pattern][bit]
             time.sleep(delay_time/1000)
-    _heading = _heading - degrees + angular_error
+    _heading = _heading - degrees
     while _heading > 360:
         _heading = _heading - 360
     while _heading < 0:
@@ -222,17 +230,17 @@ def goto(x, y):
     if abs(trnRight) > 180:
         if trnRight >= 0:
             left(360 - trnRight)
-            if DEBUG: print('left(%s)' % (360 - trnRight))
+            #if DEBUG: print('left(%s)' % (360 - trnRight))
         else:
             right(360 + trnRight)
-            if DEBUG: print('right(%s)' % (360 + trnRight))
+            #if DEBUG: print('right(%s)' % (360 + trnRight))
     else:
         if trnRight >= 0:
             right(trnRight)
-            if DEBUG: print('right(%s)' % trnRight)
+            #if DEBUG: print('right(%s)' % trnRight)
         else:
             left(-trnRight)
-            if DEBUG: print('left(%s)' % -trnRight)
+            #if DEBUG: print('left(%s)' % -trnRight)
     dist = distance(tuple(position()), (x, y))
     forward(dist)
     #if DEBUG: print('forward(%s)' % distance)
@@ -296,6 +304,10 @@ def speed(x):
 
 def shape(x):
     if DEBUG: print('shape() is not implemented in Turtle Robot')
+
+
+def color(x):
+    if DEBUG: print('color() is not implemented in Turtle Robot')
 
 
 def position():
@@ -428,3 +440,20 @@ def speed(speed=None):
 
 def isButtonPushed():
     return not button.value #pulled up (True) when not pushed
+
+
+def drawPage():
+    #boarder of 8.5 x 11 in paper
+    pageX = 280
+    pageY = 216
+    penup()
+    goto(-pageX/2, -pageY/2)
+    pendown()
+    goto(-pageX/2, pageY/2)
+    goto(pageX/2, pageY/2)
+    goto(pageX/2, -pageY/2)
+    goto(-pageX/2, -pageY/2)
+    penup()
+    goto(0,0)
+
+

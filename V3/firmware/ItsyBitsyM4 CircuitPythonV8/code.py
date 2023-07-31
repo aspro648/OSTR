@@ -20,16 +20,12 @@ Workshop Links:
 Activites:
   https://www.tinkercad.com/joinclass/6I6RPXA9QDII
   https://groklearning.com/hoc/activity/snowflake/
-
-Turtle Name:  Turtle
-Turtle Owner: Your Name
-Serial Number: 015
 '''
 
-#from turtle import *
+
 from tone import tone         # tone(frequency, duration)
 from RGBled import RGBled     # RGBled((red, blue, green))
-myColor = (0, 0, 255)       #https://www.rapidtables.com/web/color/RGB_Color.html
+myColor = (0, 0, 255)         # https://www.rapidtables.com/web/color/RGB_Color.html
 RGBled(myColor, brightness=0.15)
 
 print("Hello!  Edit 'code.py' to change the robots behavor.\n")
@@ -37,13 +33,6 @@ print("Hello!  Edit 'code.py' to change the robots behavor.\n")
 # Uncomment just code file below that you would like to execute and save this file.
 # Click on [Serial] button to see code output.
 # Open the individual ".py" file to see what it does or modify it.
-
-import Example_01_blink
-# --- The following scripts are Turtle Robot specific ---
-#import eye_check
-#import example
-#import music_example
-#import turtle_obstacles
 
 # --- The following will run on the Robot or on a laptop ---
 #import turtle_wheel_calibration
@@ -54,4 +43,9 @@ import Example_01_blink
 #import turtle_cursive_example
 #import turtle_goto_example
 
-
+# --- The following scripts are Turtle Robot specific ---
+import eye_check
+#import Example_01_blink
+#import Example_01_blink_RGB
+#import Example_02_button
+#import Example_03_PWM
