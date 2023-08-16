@@ -23,8 +23,8 @@ Activites:
 '''
 
 # comment these out if you don't want sound or color LED on startup
-#import Example_01_RGB         # sets RGB color
-#import Example_04_speaker     # plays a random tone on startup
+import Example_01_RGB         # sets RGB color
+import Example_04_speaker     # plays a random tone on startup
 
 print("\nHello!  Edit 'code.py' to change which program runs.\n")
 
@@ -33,13 +33,13 @@ print("\nHello!  Edit 'code.py' to change which program runs.\n")
 # Open the individual ".py" file to see what it does or modify it.
 
 # --- The following scripts are Turtle Robot specific ---
-import Example_01_blink
+#import Example_01_blink
 #import Example_02_button
 #import Example_03_PWM
 #import Example_04_music
 #import Example_04_rtttl
 #import Example_05_IR
-#import Example_05_eye_check
+import Example_05_eye_check
 #import Example_06_servo
 #import Example_07_stepper
 
